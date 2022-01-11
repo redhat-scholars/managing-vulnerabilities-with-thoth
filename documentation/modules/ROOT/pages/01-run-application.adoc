@@ -1,0 +1,55 @@
+= Manage vulnerablities in your dependencies with an example application
+include::_attributes.adoc[]
+
+This is an example of an application which uses Thoth's recommendations to recommend a software stack for specific security requirements. 
+The application is showing one of the Integration of Thoth using Thamos CLI.
+
+For OpenShift s2i (Source-To-Image) examples, visit thoth-station/s2i-example repository.
+
+[#installation]
+== Installing the Thamos CLI
+
+One of the integration for Thoth is Thamos. You can use Thoth's recommendation engine directly from within your terminal. 
+First, you need to clone this example repo and install Thamos CLI:
+
+[.lines_space]
+[.console-input]
+[source,bash]
+git clone https://github.com/thoth-station/cli-example.git && cd cli-example
+pip3 install thamos
+thamos --help
+
+The pre-configured template for Thamos CLI is available in the .thoth.yaml file:
+
+[.lines_space]
+[.console-input]
+[source,bash]
+cat .thoth.yaml
+
+Now you are ready to ask for advice:
+
+[.lines_space]
+[.console-input]
+[source,bash]
+thamos advise
+
+This might take some time. Once Thoth recommends you the application stack to be used for running the application, you can use Thamos to create a Python environment (based on configuration in .thoth.yaml) and install the recommended requirements into it:
+
+[.lines_space]
+[.console-input]
+[source,bash]
+thamos install
+
+And finally, run the application:
+
+[.lines_space]
+[.console-input]
+[source,bash]
+thamos run ./game_of_life.py
+
+To browse Thoth's logs produced during the resolution:
+
+[.lines_space]
+[.console-input]
+[source,bash]
+thamos log

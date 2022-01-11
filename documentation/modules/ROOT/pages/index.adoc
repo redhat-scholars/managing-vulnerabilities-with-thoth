@@ -1,20 +1,24 @@
-= Welcome to Template Tutorial
+= Welcome to the Managing Vulnerabilities with Thoth Tutorial
 :page-layout: home
 :!sectids:
 
-[.text-center.strong]
-== Publish Services to Kubernetes
+image::thoth-station.png[]
 
-A Kubernetes tutorial to show how you can deploy a Java service to a Kubernetes cluster as it was a child game.
+[.text-center.strong]
+== Introduction
+
+In this tutorial, we are going to demonstrate how to manage vulnerabilities in Python applications with Thoth via the Thamos CLI.
+This track includes an example of an application which uses Thoth's recommendations to recommend a software stack for specific security requirements.
 
 [.tiles.browse]
 == Browse modules
 
 [.tile]
-.xref:01-setup.adoc[Get Started]
-* xref:01-setup.adoc#minikube[Minikube]
+.xref:01-run-application.adoc[Running the Application]
+* xref:01-run-application.adoc#installation[Installing the Thamos CLI]
 
 [.tile]
-.xref:02-deploy.adoc[Deploying]
-* xref:02-deploy.adoc#package[Package the Application]
-* xref:02-deploy.adoc#deploy[Deploy the Application]
+.xref:02-manage-vulnerabilities.adoc[Managing Vulnerabilities with Thamos]
+* xref:02-manage-vulnerabilities.adoc#introduce-vulnerability[Introducing a Vulnerability]
+* xref:02-manage-vulnerabilities.adoc#thamos-resolution[Resolving Security Issues with Thamos]
+* xref:02-manage-vulnerabilities.adoc#run-application[Running the Example Application]
