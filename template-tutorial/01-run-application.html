@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Welcome to the Managing Vulnerabilities with Thoth Tutorial :: Managing Vulnerabilities with Thoth</title>
-    <link rel="canonical" href="https://redhat-scholars.github.io/managing-vulnerabilities-with-thoth/template-tutorial/index.html">
-    <link rel="next" href="01-run-application.html">
+    <title>Manage vulnerablities in your dependencies with an example application :: Managing Vulnerabilities with Thoth</title>
+    <link rel="canonical" href="https://redhat-scholars.github.io/managing-vulnerabilities-with-thoth/template-tutorial/01-run-application.html">
+    <link rel="prev" href="index.html">
+    <link rel="next" href="02-manage-vulnerabilities.html">
     <meta name="generator" content="Antora 3.0.0">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
@@ -50,12 +51,12 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="01-run-application.html">1. Running the Application</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="01-run-application.html#installation">Installing the Thamos CLI</a>
+    <a class="nav-link" href="#installation">Installing the Thamos CLI</a>
   </li>
 </ul>
   </li>
@@ -85,65 +86,88 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="index.html" class="home-link is-current"></a>
+  <a href="index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Managing Vulnerabilities with Thoth</a></li>
-    <li><a href="index.html">Welcome to the Managing Vulnerabilities with Thoth Tutorial</a></li>
+    <li><a href="01-run-application.html">1. Running the Application</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/redhat-scholars/managing-vulnerabilities-with-thoth/edit/master/documentation/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/redhat-scholars/managing-vulnerabilities-with-thoth/edit/master/documentation/modules/ROOT/pages/01-run-application.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Welcome to the Managing Vulnerabilities with Thoth Tutorial</h1>
+<h1 class="page">Manage vulnerablities in your dependencies with an example application</h1>
 <div id="preamble">
 <div class="sectionbody">
-<div class="imageblock">
-<div class="content">
-<img src="_images/thoth-station.png" alt="thoth station">
+<div class="paragraph">
+<p>This is an example of an application which uses Thoth&#8217;s recommendations to recommend a software stack for specific security requirements.
+The application is showing one of the Integration of Thoth using Thamos CLI.</p>
+</div>
+<div class="paragraph">
+<p>For OpenShift s2i (Source-To-Image) examples, visit thoth-station/s2i-example repository.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1 text-center strong">
-<h2>Introduction</h2>
+<div class="sect1">
+<h2 id="installation"><a class="anchor" href="#installation"></a>Installing the Thamos CLI</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In this tutorial, we are going to demonstrate how to manage vulnerabilities in Python applications with Thoth via the Thamos CLI.
-This track includes an example of an application which uses Thoth&#8217;s recommendations to recommend a software stack for specific security requirements.</p>
+<p>One of the integration for Thoth is Thamos. You can use Thoth&#8217;s recommendation engine directly from within your terminal.
+First, you need to clone this example repo and install Thamos CLI:</p>
+</div>
+<div class="listingblock lines_space console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git clone https://github.com/thoth-station/cli-example.git &amp;&amp; cd cli-example
+pip3 install thamos
+thamos --help</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>The pre-configured template for Thamos CLI is available in the .thoth.yaml file:</p>
 </div>
-<div class="sect1 tiles browse">
-<h2>Browse modules</h2>
-<div class="sectionbody">
-<div class="ulist tile">
-<div class="title"><a href="01-run-application.html" class="xref page">Running the Application</a></div>
-<ul>
-<li>
-<p><a href="01-run-application.html#installation" class="xref page">Installing the Thamos CLI</a></p>
-</li>
-</ul>
+<div class="listingblock lines_space console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">cat .thoth.yaml</code></pre>
 </div>
-<div class="ulist tile">
-<div class="title"><a href="02-manage-vulnerabilities.html" class="xref page">Managing Vulnerabilities with Thamos</a></div>
-<ul>
-<li>
-<p><a href="02-manage-vulnerabilities.html#introduce-vulnerability" class="xref page">Introducing a Vulnerability</a></p>
-</li>
-<li>
-<p><a href="02-manage-vulnerabilities.html#thamos-resolution" class="xref page">Resolving Security Issues with Thamos</a></p>
-</li>
-<li>
-<p><a href="02-manage-vulnerabilities.html#run-application" class="xref page">Running the Example Application</a></p>
-</li>
-</ul>
+</div>
+<div class="paragraph">
+<p>Now you are ready to ask for advice:</p>
+</div>
+<div class="listingblock lines_space console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">thamos advise</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This might take some time. Once Thoth recommends you the application stack to be used for running the application, you can use Thamos to create a Python environment (based on configuration in .thoth.yaml) and install the recommended requirements into it:</p>
+</div>
+<div class="listingblock lines_space console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">thamos install</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And finally, run the application:</p>
+</div>
+<div class="listingblock lines_space console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">thamos run ./game_of_life.py</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To browse Thoth&#8217;s logs produced during the resolution:</p>
+</div>
+<div class="listingblock lines_space console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">thamos log</code></pre>
+</div>
 </div>
 </div>
 </div>
 <nav class="pagination">
-  <span class="next"><a href="01-run-application.html">1. Running the Application</a></span>
+  <span class="prev"><a href="index.html">Managing Vulnerabilities with Thoth</a></span>
+  <span class="next"><a href="02-manage-vulnerabilities.html">2. Managing Vulnerabilities with Thamos</a></span>
 </nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">

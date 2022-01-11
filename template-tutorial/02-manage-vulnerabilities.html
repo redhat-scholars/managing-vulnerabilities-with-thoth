@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Welcome to the Managing Vulnerabilities with Thoth Tutorial :: Managing Vulnerabilities with Thoth</title>
-    <link rel="canonical" href="https://redhat-scholars.github.io/managing-vulnerabilities-with-thoth/template-tutorial/index.html">
-    <link rel="next" href="01-run-application.html">
+    <title>Managing Vulnerabilities with Thamos :: Managing Vulnerabilities with Thoth</title>
+    <link rel="canonical" href="https://redhat-scholars.github.io/managing-vulnerabilities-with-thoth/template-tutorial/02-manage-vulnerabilities.html">
+    <link rel="prev" href="01-run-application.html">
     <meta name="generator" content="Antora 3.0.0">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
@@ -59,18 +59,18 @@
   </li>
 </ul>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="02-manage-vulnerabilities.html">2. Managing Vulnerabilities with Thamos</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="02-manage-vulnerabilities.html#introduce-vulnerability">Introducing a Vulnerability</a>
+    <a class="nav-link" href="#introduce-vulnerability">Introducing a Vulnerability</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="02-manage-vulnerabilities.html#thamos-resolution">Resolving Security Issues with Thamos</a>
+    <a class="nav-link" href="#thamos-resolution">Resolving Security Issues with Thamos</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="02-manage-vulnerabilities.html#run-application">Running the Example Application</a>
+    <a class="nav-link" href="#run-application">Running the Example Application</a>
   </li>
 </ul>
   </li>
@@ -85,65 +85,83 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="index.html" class="home-link is-current"></a>
+  <a href="index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Managing Vulnerabilities with Thoth</a></li>
-    <li><a href="index.html">Welcome to the Managing Vulnerabilities with Thoth Tutorial</a></li>
+    <li><a href="02-manage-vulnerabilities.html">2. Managing Vulnerabilities with Thamos</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/redhat-scholars/managing-vulnerabilities-with-thoth/edit/master/documentation/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/redhat-scholars/managing-vulnerabilities-with-thoth/edit/master/documentation/modules/ROOT/pages/02-manage-vulnerabilities.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Welcome to the Managing Vulnerabilities with Thoth Tutorial</h1>
-<div id="preamble">
-<div class="sectionbody">
-<div class="imageblock">
-<div class="content">
-<img src="_images/thoth-station.png" alt="thoth station">
-</div>
-</div>
-</div>
-</div>
-<div class="sect1 text-center strong">
-<h2>Introduction</h2>
+<h1 class="page">Managing Vulnerabilities with Thamos</h1>
+<div class="sect1">
+<h2 id="introduce-vulnerability"><a class="anchor" href="#introduce-vulnerability"></a>Introducing a Vulnerability</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In this tutorial, we are going to demonstrate how to manage vulnerabilities in Python applications with Thoth via the Thamos CLI.
-This track includes an example of an application which uses Thoth&#8217;s recommendations to recommend a software stack for specific security requirements.</p>
+<p>The game_of_life.py program is a simple application that shows how Thamos manages known vulnerablities in the dependencies of a project.
+To use this example application, follow the steps mentioned above relative to the installation of the Thamos CLI and to its configuration using .thoth.yaml.</p>
+</div>
+<div class="paragraph">
+<p>To introduce voluntarily a known vulnerability in the project, specify that you would like to add pillow version 8.0.0 in your requirements:</p>
+</div>
+<div class="listingblock lines_space console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">thamos add pillow==8.0.0</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This version of pillow is known for introducing a vulnerability further described on the pypa/advisory-db repository.
+Thamos can also manage user requirements for dependencies using constraints files.
+To add pillow version 8.0.0 in your dependency requirements this way, you can simply write the package with its version into this file.</p>
 </div>
 </div>
 </div>
-<div class="sect1 tiles browse">
-<h2>Browse modules</h2>
+<div class="sect1">
+<h2 id="thamos-resolution"><a class="anchor" href="#thamos-resolution"></a>Resolving Security Issues with Thamos</h2>
 <div class="sectionbody">
-<div class="ulist tile">
-<div class="title"><a href="01-run-application.html" class="xref page">Running the Application</a></div>
-<ul>
-<li>
-<p><a href="01-run-application.html#installation" class="xref page">Installing the Thamos CLI</a></p>
-</li>
-</ul>
+<div class="paragraph">
+<p>To get a stack guidance based on security, run the following command:</p>
 </div>
-<div class="ulist tile">
-<div class="title"><a href="02-manage-vulnerabilities.html" class="xref page">Managing Vulnerabilities with Thamos</a></div>
-<ul>
-<li>
-<p><a href="02-manage-vulnerabilities.html#introduce-vulnerability" class="xref page">Introducing a Vulnerability</a></p>
-</li>
-<li>
-<p><a href="02-manage-vulnerabilities.html#thamos-resolution" class="xref page">Resolving Security Issues with Thamos</a></p>
-</li>
-<li>
-<p><a href="02-manage-vulnerabilities.html#run-application" class="xref page">Running the Example Application</a></p>
-</li>
-</ul>
+<div class="listingblock lines_space console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">thamos advise --recommendation-type security</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Or modify the recommendation_type field to security in .thoth.yaml to set it as your default recommendation type, and simply run:</p>
+</div>
+<div class="listingblock lines_space console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">thamos advise</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Thamos report should show that an error occured during the resolution process because a known vulnerability was found in pillow version 8.0.0 .</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="run-application"><a class="anchor" href="#run-application"></a>Running the Example Application</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now that you know how Thamos prevents the use of unsafe dependencies in your application, you can revert to another version of pillow to complete this part of the tutorial.
+To launch the example application with the resolved dependencies, run:</p>
+</div>
+<div class="listingblock lines_space console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">thamos run ./game_of_life.py</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To launch a new game with the default parameters or choose your own parameters as specified in the help section. Click on the coordinates to select your first generation of individuals and press p to see next generations.</p>
 </div>
 </div>
 </div>
 <nav class="pagination">
-  <span class="next"><a href="01-run-application.html">1. Running the Application</a></span>
+  <span class="prev"><a href="01-run-application.html">1. Running the Application</a></span>
 </nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
