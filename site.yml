@@ -3,7 +3,7 @@ runtime:
 
 site:
   title: Managing Vulnerabilities with Thoth
-  url: https://redhat-scholars.github.io/course-template
+  url: https://redhat-scholars.github.io/managing-vulnerabilities-with-thoth
   start_page: template-tutorial::index.adoc
 
 content:
