@@ -2,7 +2,7 @@
 :page-layout: home
 :!sectids:
 
-// Thoth logo here
+image::thoth-station.png[]
 
 [.text-center.strong]
 == Introduction
