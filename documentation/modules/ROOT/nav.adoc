@@ -1,7 +1,7 @@
-* xref:01-setup.adoc[1. Setup]
-** xref:01-setup.adoc#prerequisite[Prerequisites]
-** xref:01-setup.adoc#minikube[Setup Minikube]
+* xref:01-run-application.adoc[1. Running the Application]
+** xref:01-run-application.adoc#installation[Installing the Thamos CLI]
 
-* xref:02-deploy.adoc[2. Deploy Service]
-** xref:02-deploy.adoc#package[Build Service]
-** xref:02-deploy.adoc#deploy[Deploy Dervice]
+* xref:02-manage-vulnerabilities.adoc[2. Managing Vulnerabilities with Thamos]
+** xref:02-manage-vulnerabilities.adoc#introduce-vulnerability[Introducing a Vulnerability]
+** xref:02-manage-vulnerabilities.adoc#thamos-resolution[Resolving Security Issues with Thamos]
+** xref:02-manage-vulnerabilities.adoc#run-application[Running the Example Application]

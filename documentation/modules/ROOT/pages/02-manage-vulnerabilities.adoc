@@ -1,0 +1,51 @@
+=  Managing Vulnerabilities with Thamos
+include::_attributes.adoc[]
+
+[#introduce-vulnerability]
+== Introducing a Vulnerability
+
+The game_of_life.py program is a simple application that shows how Thamos manages known vulnerablities in the dependencies of a project. 
+To use this example application, follow the steps mentioned above relative to the installation of the Thamos CLI and to its configuration using .thoth.yaml.
+
+To introduce voluntarily a known vulnerability in the project, specify that you would like to add pillow version 8.0.0 in your requirements:
+
+[.lines_space]
+[.console-input]
+[source,bash]
+thamos add pillow==8.0.0
+
+This version of pillow is known for introducing a vulnerability further described on the pypa/advisory-db repository. 
+Thamos can also manage user requirements for dependencies using constraints files. 
+To add pillow version 8.0.0 in your dependency requirements this way, you can simply write the package with its version into this file.
+
+[#thamos-resolution]
+== Resolving Security Issues with Thamos
+
+To get a stack guidance based on security, run the following command:
+
+[.lines_space]
+[.console-input]
+[source,bash]
+thamos advise --recommendation-type security
+
+Or modify the recommendation_type field to security in .thoth.yaml to set it as your default recommendation type, and simply run:
+
+[.lines_space]
+[.console-input]
+[source,bash]
+thamos advise
+
+Thamos report should show that an error occured during the resolution process because a known vulnerability was found in pillow version 8.0.0 .
+
+[#run-application]
+== Running the Example Application
+
+Now that you know how Thamos prevents the use of unsafe dependencies in your application, you can revert to another version of pillow to complete this part of the tutorial. 
+To launch the example application with the resolved dependencies, run:
+
+[.lines_space]
+[.console-input]
+[source,bash]
+thamos run ./game_of_life.py
+
+To launch a new game with the default parameters or choose your own parameters as specified in the help section. Click on the coordinates to select your first generation of individuals and press p to see next generations.
