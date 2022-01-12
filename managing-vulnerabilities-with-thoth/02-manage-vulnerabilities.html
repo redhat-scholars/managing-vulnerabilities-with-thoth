@@ -100,8 +100,8 @@
 <h2 id="introduce-vulnerability"><a class="anchor" href="#introduce-vulnerability"></a>Introducing a Vulnerability</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The game_of_life.py program is a simple application that shows how Thamos manages known vulnerablities in the dependencies of a project.
-To use this example application, follow the steps mentioned above relative to the installation of the Thamos CLI and to its configuration using .thoth.yaml.</p>
+<p>The :game_of_life.py: program is a simple application that shows how Thamos manages known vulnerablities in the dependencies of a project.
+To use this example application, follow the steps mentioned above relative to the installation of the Thamos CLI and to its configuration using :.thoth.yaml:.</p>
 </div>
 <div class="paragraph">
 <p>To introduce voluntarily a known vulnerability in the project, specify that you would like to add pillow version 8.0.0 in your requirements:</p>
@@ -117,7 +117,7 @@ To use this example application, follow the steps mentioned above relative to th
 </div>
 </div>
 <div class="paragraph">
-<p>This version of pillow is known for introducing a vulnerability further described on the pypa/advisory-db repository.
+<p>This version of pillow is known for introducing a vulnerability further described on the <a href="https://github.com/pypa/advisory-db">pypa/advisory-db</a> repository.
 Thamos can also manage user requirements for dependencies using constraints files.
 To add pillow version 8.0.0 in your dependency requirements this way, you can simply write the package with its version into this file.</p>
 </div>
@@ -236,7 +236,7 @@ To add pillow version 8.0.0 in your dependency requirements this way, you can si
 </div>
 </div>
 <div class="paragraph">
-<p>Or modify the recommendation_type field to security in .thoth.yaml to set it as your default recommendation type, and simply run:</p>
+<p>Or modify the recommendation_type field to security in :.thoth.yaml: to set it as your default recommendation type, and simply run:</p>
 </div>
 <div class="listingblock lines_space console-input">
 <div class="content">
