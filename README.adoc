@@ -1,1 +1,1 @@
-Check the build courseware https://redhat-scholars.github.io/build-course[documentation]  on how folder structure, how to use macros and other gotchas
+This Thoth tutorial taken from the https://github.com/thoth-station/cli-examples[thoth/cli-examples] repository and is available publicly on Red Hat Developer at https://redhat-scholars.github.io/managing-vulnerabilities-with-thoth
