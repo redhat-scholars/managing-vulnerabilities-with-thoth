@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Managing Vulnerabilities with Thamos :: Managing Vulnerabilities with Thoth</title>
+    <link rel="canonical" href="https://redhat-scholars.github.io/managing-vulnerabilities-with-thoth/managing-vulnerabilities-with-thoth/02-manage-vulnerabilities.html">
+    <link rel="prev" href="01-run-application.html">
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://developers.redhat.com" target="_blank"><img src="../_/img/NewRHDFullLogo_4-color_white-wordmark.png" height="40px" alt="Red Hat Developer Program"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="https://redhat-scholars.github.io/managing-vulnerabilities-with-thoth">Managing Vulnerabilities with Thoth</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://developers.redhat.com/ebooks/" target="_blank">Books</a>
+        <a class="navbar-item" href="https://developers.redhat.com/cheatsheets/" target="_blank">Cheat Sheets</a>
+        <a class="navbar-item" href="https://developers.redhat.com/events/" target="_blank">Upcoming Events</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">More Tutorials</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://redhat-developer-demos.github.io/kubernetes-tutorial/" target="_blank">Kubernetes</a>
+            <a class="navbar-item" href="https://redhat-developer-demos.github.io/istio-tutorial/" target="_blank">Istio</a>
+            <a class="navbar-item" href="https://redhat-developer-demos.github.io/quarkus-tutorial/" target="_blank">Quarkus</a>
+            <a class="navbar-item" href="https://redhat-developer-demos.github.io/knative-tutorial/" target="_blank">Knative</a>
+            <a class="navbar-item" href="https://redhat-developer-demos.github.io/tekton-tutorial/" target="_blank">Tekton</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="managing-vulnerabilities-with-thoth" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html"></a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="01-run-application.html">1. Running the Application</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="01-run-application.html#installation">Installing the Thamos CLI</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="02-manage-vulnerabilities.html">2. Managing Vulnerabilities with Thamos</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#introduce-vulnerability">Introducing a Vulnerability</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#thamos-resolution">Resolving Security Issues with Thamos</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#run-application">Running the Example Application</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Managing Vulnerabilities with Thoth</a></li>
+    <li><a href="02-manage-vulnerabilities.html">2. Managing Vulnerabilities with Thamos</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/redhat-scholars/managing-vulnerabilities-with-thoth/edit/master/documentation/modules/ROOT/pages/02-manage-vulnerabilities.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Managing Vulnerabilities with Thamos</h1>
+<div class="sect1">
+<h2 id="introduce-vulnerability"><a class="anchor" href="#introduce-vulnerability"></a>Introducing a Vulnerability</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The game_of_life.py program is a simple application that shows how Thamos manages known vulnerablities in the dependencies of a project.
+To use this example application, follow the steps mentioned above relative to the installation of the Thamos CLI and to its configuration using .thoth.yaml.</p>
+</div>
+<div class="paragraph">
+<p>To introduce voluntarily a known vulnerability in the project, specify that you would like to add pillow version 8.0.0 in your requirements:</p>
+</div>
+<div class="listingblock lines_space console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">thamos add pillow==8.0.0</code></pre>
+</div>
+</div>
+<div class="listingblock lines_space console-output">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">2022-01-12 14:20:11,248 [217578] INFO     thamos.lib: Adding 'pillow==8.0.0' to default requirements of runtime environment 'ubi8'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This version of pillow is known for introducing a vulnerability further described on the pypa/advisory-db repository.
+Thamos can also manage user requirements for dependencies using constraints files.
+To add pillow version 8.0.0 in your dependency requirements this way, you can simply write the package with its version into this file.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="thamos-resolution"><a class="anchor" href="#thamos-resolution"></a>Resolving Security Issues with Thamos</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To get a stack guidance based on security, run the following command:</p>
+</div>
+<div class="listingblock lines_space console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">thamos advise --recommendation-type security</code></pre>
+</div>
+</div>
+<div class="listingblock lines_space console-output">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">2022-01-12 14:20:53,796 [217661] INFO     thamos.lib: Successfully submitted advise analysis 'adviser-220112132053-236b5c3ed7d5cdd' to 'https://khemenu.thoth-station.ninja/api/v1'
+                                                                               Application stack guidance
+                                                                                      ╷                                                                                     ╷
+  Link                                                                                │ Message                                                                             │ Type
+ ═════════════════════════════════════════════════════════════════════════════════════╪═════════════════════════════════════════════════════════════════════════════════════╪═══════════
+  https://quay.io/repository/thoth-station/ps-cv-ocr                                  │ Consider using a computer vision predictable stack 'ps-cv-ocr' that has prepared    │ ✔️ INFO
+                                                                                      │ environment with 'pillow'                                                           │
+  https://quay.io/repository/thoth-station/ps-cv-pytorch                              │ Consider using a computer vision predictable stack 'ps-cv-pytorch' that has         │ ✔️ INFO
+                                                                                      │ prepared environment with 'pillow'                                                  │
+  https://quay.io/repository/thoth-station/ps-cv-tensorflow                           │ Consider using a computer vision predictable stack 'ps-cv-tensorflow' that has      │ ✔️ INFO
+                                                                                      │ prepared environment with 'pillow'                                                  │
+  https://quay.io/repository/thoth-station/ps-ip-ifd                                  │ Consider using a image processing predictable stack 'ps-ip-ifd' that has prepared   │ ✔️ INFO
+                                                                                      │ environment with 'pillow'                                                           │
+  https://thoth-station.ninja/search/adviser-220112132053-236b5c3ed7d5cdd/summary     │ Results can be browsed in Thoth search                                              │ ✔️ INFO
+  https://thoth-station.ninja/j/cve_timestamp                                         │ CVE database of known vulnerabilities for Python packages was updated at            │ ⚠️ WARNING
+                                                                                      │ '2021-12-20T00:00:04.615854'                                                        │
+  https://thoth-station.ninja/j/lax_version                                           │ No version range specifier for 'asyncclick' found, it is recommended to specify     │ ⚠️ WARNING
+                                                                                      │ version ranges in requirements                                                      │
+  https://thoth-station.ninja/j/lax_version                                           │ No version range specifier for 'click' found, it is recommended to specify version  │ ⚠️ WARNING
+                                                                                      │ ranges in requirements                                                              │
+  https://thoth-station.ninja/j/lax_version                                           │ No version range specifier for 'pygame' found, it is recommended to specify version │ ⚠️ WARNING
+                                                                                      │ ranges in requirements                                                              │
+  https://thoth-station.ninja/j/thoth_s2i                                             │ It is recommended to use Thoth's s2i to have recommendations specific to runtime    │ ✔️ INFO
+                                                                                      │ environment                                                                         │
+  https://thoth-station.ninja/j/rhel_ubi                                              │ Using observations for RHEL instead of UBI, RHEL is ABI compatible with UBI         │ ⚠️ WARNING
+  https://thoth-station.ninja/recommendation-types/                                   │ Using recommendation type 'security'                                                │ ✔️ INFO
+  https://thoth-station.ninja/j/env                                                   │ Resolving for runtime environment named 'ubi8'                                      │ ✔️ INFO
+  https://thoth-station.ninja/j/env                                                   │ Resolving for operating system 'rhel' in version '8'                                │ -
+  https://thoth-station.ninja/j/env                                                   │ Resolving for Python version '3.8'                                                  │ ✔️ INFO
+  https://thoth-station.ninja/j/env                                                   │ Using platform 'linux-x86_64'                                                       │ ✔️ INFO
+  https://thoth-station.ninja/j/env                                                   │ No constraints supplied to the resolution process                                   │ ✔️ INFO
+  https://thoth-station.ninja/j/env                                                   │ Using supplied static source code analysis                                          │ ✔️ INFO
+  https://thoth-station.ninja/j/env                                                   │ No containerized environment used                                                   │ ✔️ INFO
+  https://thoth-station.ninja/j/env                                                   │ Using CPU family 'UNKNWON' model 'UNKNOWN'                                          │ ✔️ INFO
+  https://thoth-station.ninja/j/env                                                   │ No CUDA used                                                                        │ ✔️ INFO
+  https://thoth-station.ninja/j/env                                                   │ No cuDNN used                                                                       │ ✔️ INFO
+  https://thoth-station.ninja/j/env                                                   │ No OpenBLAS used                                                                    │ ✔️ INFO
+  https://thoth-station.ninja/j/env                                                   │ No OpenMPI used                                                                     │ ✔️ INFO
+  https://thoth-station.ninja/j/env                                                   │ No MKL used                                                                         │ ✔️ INFO
+  https://thoth-station.ninja/j/eol_env                                               │ Runtime environment used is no longer supported, it is recommended to switch to     │ ⚠️ WARNING
+                                                                                      │ another runtime environment                                                         │
+  https://thoth-station.ninja/j/prescription                                          │ Using prescriptions 'thoth' release 'v0.13.0'                                       │ ✔️ INFO
+  https://github.com/thoth-station/prescriptions                                      │ Using resolver prescriptions from thoth-station/prescriptions                       │ ✔️ INFO
+  https://thoth-station.ninja/j/no_cpu                                                │ No CPU model provided, please state CPU model in your .thoth.yaml configuration     │ ⚠️ WARNING
+                                                                                      │ file to have recommendations optimized for your runtime environment                 │
+  https://thoth-station.ninja/j/no_cpu                                                │ No CPU family provided, please state CPU family in your .thoth.yaml configuration   │ ⚠️ WARNING
+                                                                                      │ file to have recommendations optimized for your runtime environment                 │
+  https://thoth-station.ninja/j/rules                                                 │ Removing package 'click' in versions '&lt;=6.6' from index 'https://pypi.org/simple'   │ ⚠️ WARNING
+                                                                                      │ based on rule: Package released before December 2016                                │
+  https://pillow.readthedocs.io/en/stable/releasenotes/8.2.0.html#cve-2021-25287-cve- │ Skipping including package ('pillow', '8.0.0', 'https://pypi.org/simple') as a CVE  │ ⚠️ WARNING
+  2021-25288-fix-oob-read-in-jpeg2kdecode                                             │ 'PYSEC-2021-137' was found                                                          │
+  https://pillow.readthedocs.io/en/stable/releasenotes/8.2.0.html#cve-2021-25287-cve- │ Skipping including package ('pillow', '8.0.0', 'https://pypi.org/simple') as a CVE  │ ⚠️ WARNING
+  2021-25288-fix-oob-read-in-jpeg2kdecode                                             │ 'PYSEC-2021-138' was found                                                          │
+  https://pillow.readthedocs.io/en/stable/releasenotes/8.2.0.html#cve-2021-28675-fix- │ Skipping including package ('pillow', '8.0.0', 'https://pypi.org/simple') as a CVE  │ ⚠️ WARNING
+  dos-in-psdimageplugin                                                               │ 'PYSEC-2021-139' was found                                                          │
+  https://pillow.readthedocs.io/en/stable/releasenotes/8.3.2.html                     │ Skipping including package ('pillow', '8.0.0', 'https://pypi.org/simple') as a CVE  │ ⚠️ WARNING
+                                                                                      │ 'PYSEC-2021-317' was found                                                          │
+  https://pillow.readthedocs.io/en/stable/releasenotes/index.html                     │ Skipping including package ('pillow', '8.0.0', 'https://pypi.org/simple') as a CVE  │ ⚠️ WARNING
+                                                                                      │ 'PYSEC-2021-331' was found                                                          │
+  https://pillow.readthedocs.io/en/stable/releasenotes/8.1.1.html                     │ Skipping including package ('pillow', '8.0.0', 'https://pypi.org/simple') as a CVE  │ ⚠️ WARNING
+                                                                                      │ 'PYSEC-2021-35' was found                                                           │
+  https://pillow.readthedocs.io/en/stable/releasenotes/8.1.1.html                     │ Skipping including package ('pillow', '8.0.0', 'https://pypi.org/simple') as a CVE  │ ⚠️ WARNING
+                                                                                      │ 'PYSEC-2021-36' was found                                                           │
+  https://pillow.readthedocs.io/en/stable/releasenotes/8.1.1.html                     │ Skipping including package ('pillow', '8.0.0', 'https://pypi.org/simple') as a CVE  │ ⚠️ WARNING
+                                                                                      │ 'PYSEC-2021-37' was found                                                           │
+  https://pillow.readthedocs.io/en/stable/releasenotes/8.1.1.html                     │ Skipping including package ('pillow', '8.0.0', 'https://pypi.org/simple') as a CVE  │ ⚠️ WARNING
+                                                                                      │ 'PYSEC-2021-38' was found                                                           │
+  https://pillow.readthedocs.io/en/stable/releasenotes/8.1.1.html                     │ Skipping including package ('pillow', '8.0.0', 'https://pypi.org/simple') as a CVE  │ ⚠️ WARNING
+                                                                                      │ 'PYSEC-2021-39' was found                                                           │
+  https://pillow.readthedocs.io/en/stable/releasenotes/8.1.1.html                     │ Skipping including package ('pillow', '8.0.0', 'https://pypi.org/simple') as a CVE  │ ⚠️ WARNING
+                                                                                      │ 'PYSEC-2021-40' was found                                                           │
+  https://pillow.readthedocs.io/en/stable/releasenotes/8.1.1.html                     │ Skipping including package ('pillow', '8.0.0', 'https://pypi.org/simple') as a CVE  │ ⚠️ WARNING
+                                                                                      │ 'PYSEC-2021-41' was found                                                           │
+  https://pillow.readthedocs.io/en/stable/releasenotes/8.1.1.html                     │ Skipping including package ('pillow', '8.0.0', 'https://pypi.org/simple') as a CVE  │ ⚠️ WARNING
+                                                                                      │ 'PYSEC-2021-42' was found                                                           │
+  https://pillow.readthedocs.io/en/stable/releasenotes/index.html                     │ Skipping including package ('pillow', '8.0.0', 'https://pypi.org/simple') as a CVE  │ ⚠️ WARNING
+                                                                                      │ 'PYSEC-2021-69' was found                                                           │
+  https://pillow.readthedocs.io/en/stable/releasenotes/index.html                     │ Skipping including package ('pillow', '8.0.0', 'https://pypi.org/simple') as a CVE  │ ⚠️ WARNING
+                                                                                      │ 'PYSEC-2021-70' was found                                                           │
+  https://pillow.readthedocs.io/en/stable/releasenotes/index.html                     │ Skipping including package ('pillow', '8.0.0', 'https://pypi.org/simple') as a CVE  │ ⚠️ WARNING
+                                                                                      │ 'PYSEC-2021-71' was found                                                           │
+  https://pillow.readthedocs.io/en/stable/releasenotes/8.2.0.html#cve-2021-28676-fix- │ Skipping including package ('pillow', '8.0.0', 'https://pypi.org/simple') as a CVE  │ ⚠️ WARNING
+  fli-dos                                                                             │ 'PYSEC-2021-92' was found                                                           │
+  https://github.com/python-pillow/Pillow/pull/5377                                   │ Skipping including package ('pillow', '8.0.0', 'https://pypi.org/simple') as a CVE  │ ⚠️ WARNING
+                                                                                      │ 'PYSEC-2021-93' was found                                                           │
+  https://github.com/python-pillow/Pillow/pull/5377                                   │ Skipping including package ('pillow', '8.0.0', 'https://pypi.org/simple') as a CVE  │ ⚠️ WARNING
+                                                                                      │ 'PYSEC-2021-94' was found                                                           │
+  https://thoth-station.ninja/j/unresolved                                            │ Cannot satisfy direct dependencies: direct dependencies of type 'pillow' were       │ ❌ ERROR
+                                                                                      │ removed by pipeline sieves                                                          │
+  https://thoth-station.ninja/j/install_error                                         │ The following versions of 'asyncclick' from                                         │ ⚠️ WARNING
+                                                                                      │ 'https://tensorflow.pypi.thoth-station.ninja/index/manylinux2010/AVX2/simple' were  │
+                                                                                      │ removed due to installation issues in the target environment: 7.0.3                 │
+  https://thoth-station.ninja/j/install_error                                         │ The following versions of 'click' from                                              │ ⚠️ WARNING
+                                                                                      │ 'https://tensorflow.pypi.thoth-station.ninja/index/manylinux2010/AVX2/simple' were  │
+                                                                                      │ removed due to installation issues in the target environment: 8.0.2                 │
+                                                                                      ╵                                                                                     ╵
+                                        Cannot satisfy direct dependencies: direct dependencies of type 'pillow' were removed by pipeline sieves</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Or modify the recommendation_type field to security in .thoth.yaml to set it as your default recommendation type, and simply run:</p>
+</div>
+<div class="listingblock lines_space console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">thamos advise</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Thamos report should show that an error occured during the resolution process because a known vulnerability was found in pillow version 8.0.0 .</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="run-application"><a class="anchor" href="#run-application"></a>Running the Example Application</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now that you know how Thamos prevents the use of unsafe dependencies in your application, you can revert to another version of pillow to complete this part of the tutorial.
+To launch the example application with the resolved dependencies, run:</p>
+</div>
+<div class="listingblock lines_space console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">thamos run ./game_of_life.py</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To launch a new game with the default parameters or choose your own parameters as specified in the help section. Click on the coordinates to select your first generation of individuals and press p to see next generations.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="01-run-application.html">1. Running the Application</a></span>
+</nav>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <a class="rhd-logo" href="https://developers.redhat.com" target="_blank"></div>
+</footer>
+<script src="../_/js/vendor/clipboard.js"></script>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
