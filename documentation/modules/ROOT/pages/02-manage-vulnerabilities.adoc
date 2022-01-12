@@ -4,8 +4,8 @@ include::_attributes.adoc[]
 [#introduce-vulnerability]
 == Introducing a Vulnerability
 
-The game_of_life.py program is a simple application that shows how Thamos manages known vulnerablities in the dependencies of a project. 
-To use this example application, follow the steps mentioned above relative to the installation of the Thamos CLI and to its configuration using .thoth.yaml.
+The :game_of_life.py: program is a simple application that shows how Thamos manages known vulnerablities in the dependencies of a project. 
+To use this example application, follow the steps mentioned above relative to the installation of the Thamos CLI and to its configuration using :.thoth.yaml:.
 
 To introduce voluntarily a known vulnerability in the project, specify that you would like to add pillow version 8.0.0 in your requirements:
 
@@ -19,7 +19,7 @@ thamos add pillow==8.0.0
 [source,bash]
 2022-01-12 14:20:11,248 [217578] INFO     thamos.lib: Adding 'pillow==8.0.0' to default requirements of runtime environment 'ubi8'
 
-This version of pillow is known for introducing a vulnerability further described on the pypa/advisory-db repository. 
+This version of pillow is known for introducing a vulnerability further described on the https://github.com/pypa/advisory-db[pypa/advisory-db] repository. 
 Thamos can also manage user requirements for dependencies using constraints files. 
 To add pillow version 8.0.0 in your dependency requirements this way, you can simply write the package with its version into this file.
 
@@ -134,7 +134,7 @@ thamos advise --recommendation-type security
                                                                                       ╵                                                                                     ╵            
                                         Cannot satisfy direct dependencies: direct dependencies of type 'pillow' were removed by pipeline sieves 
 
-Or modify the recommendation_type field to security in .thoth.yaml to set it as your default recommendation type, and simply run:
+Or modify the recommendation_type field to security in :.thoth.yaml: to set it as your default recommendation type, and simply run:
 
 [.lines_space]
 [.console-input]
