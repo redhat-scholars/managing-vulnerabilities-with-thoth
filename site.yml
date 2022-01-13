@@ -4,7 +4,7 @@ runtime:
 site:
   title: Managing Vulnerabilities with Thoth
   url: https://redhat-scholars.github.io/managing-vulnerabilities-with-thoth
-  start_page: template-tutorial::index.adoc
+  start_page: managing-vulnerabilities-with-thoth::index.adoc
 
 content:
   sources:
