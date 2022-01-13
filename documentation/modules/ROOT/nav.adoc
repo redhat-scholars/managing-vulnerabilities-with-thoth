@@ -6,5 +6,5 @@
 ** xref:02-manage-vulnerabilities.adoc#thamos-resolution[Resolving Security Issues with Thamos]
 ** xref:02-manage-vulnerabilities.adoc#run-application[Running the Example Application]
 
-* xref:03-container-image-security.adoc[Container Image Security with Thoth]
+* xref:03-container-image-security.adoc[3. Container Image Security with Thoth]
 ** xref:03-container-image-security.adoc#image-guidance[Container Image Security Guidance]
