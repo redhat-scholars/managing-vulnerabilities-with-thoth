@@ -20,7 +20,7 @@ thamos add pillow==8.0.0
 2022-01-12 14:20:11,248 [217578] INFO     thamos.lib: Adding 'pillow==8.0.0' to default requirements of runtime environment 'ubi8'
 
 This version of pillow is known for introducing a vulnerability further described on the https://github.com/pypa/advisory-db[pypa/advisory-db] repository. 
-Thamos can also manage user requirements for dependencies using constraints files. 
+Thamos can also manage user requirements for dependencies using https://pip.pypa.io/en/stable/user_guide/#constraints-files[constraints files]. 
 To add pillow version 8.0.0 in your dependency requirements this way, you can simply write the package with its version into this file.
 
 [#thamos-resolution]
@@ -141,7 +141,7 @@ Or modify the recommendation_type field to security in :.thoth.yaml: to set it a
 [source,bash]
 thamos advise
 
-Thamos report should show that an error occured during the resolution process because a known vulnerability was found in pillow version 8.0.0 .
+Thamos report should show that an error occurred during the resolution process because a known vulnerability was found in pillow version 8.0.0. Thoth checks vulnerabilities of direct dependencies, but also possible vulnerabilities in indirect dependencies (also known as transitive dependencies of the application). The resolution process respects https://thoth-station.ninja/docs/developers/adviser/experimental_features.html#strict-index-configuration[Python package index configuration] to avoid possible https://developers.redhat.com/articles/2021/12/21/prevent-python-dependency-confusion-attacks-thoth#dependency_management_in_python[dependency confusion attacks].
 
 [#run-application]
 == Running the Example Application

@@ -2,15 +2,15 @@
 include::_attributes.adoc[]
 
 This is an example of an application which uses Thoth's recommendations to recommend a software stack for specific security requirements. 
-The application is showing one of the Integration of Thoth using Thamos CLI.
+The application is showing one of the Integration of Thoth using https://thoth-station.ninja/docs/developers/thamos/[Thamos CLI].
 
 For OpenShift s2i (Source-To-Image) examples, visit https://github.com/thoth-station/s2i-example[thoth-station/s2i-example] repository.
 
 [#installation]
 == Installing the Thamos CLI
 
-One of the integration for Thoth is Thamos. You can use Thoth's recommendation engine directly from within your terminal. 
-First, you need to clone this example repo and install Thamos CLI:
+One of the integration for Thoth is https://thoth-station.ninja/docs/developers/thamos/[Thamos]. You can use Thoth's recommendation engine directly from within your terminal. 
+First, you need to clone the https://github.com/thoth-station/cli-examples/[thoth-station/cli-examples] repo and install Thamos CLI:
 
 [.lines_space]
 [.console-input]
