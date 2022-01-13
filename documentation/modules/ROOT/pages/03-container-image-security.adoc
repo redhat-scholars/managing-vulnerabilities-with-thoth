@@ -1,0 +1,26 @@
+=  Container Image Security with Thoth
+include::_attributes.adoc[]
+
+[#image-guidance]
+== Container Image Security Guidance
+
+Thoth can also provide security guidance for container images available for your application with the command:
+
+[.lines_space]
+[.console-input]
+[source,bash]
+:thamos images:
+
+Each entry stated in the output can be set as a base_image in :.thoth.yaml: in the respective runtime environment section and used as a base for running the Python applications.
+
+Project Thoth offers container https://developers.redhat.com/articles/2021/11/25/build-and-extend-containerized-applications-project-thoth#thoth_and_python_packaging_standards[image analyses] that introspect what is present in the container image. Notably, it can extract:
+
+* Information about the operating system
+* Information about RPM packages that are present in the container image
+* Python packages that are present in the container image and their locations, if multiple virtual environments are available
+* Python interpreters and their available versions
+* Information about the ABI provided
+* Container image metadata as extracted by Skopeo
+* Information about other libraries, such as the CUDA version (GPU software) available
+
+Thoth's resolver considers the results of container image analyses listed earlier, along with available hardware, to guide the resolution process and come up with the best configuration for a given application. 
