@@ -113,8 +113,11 @@
 </div>
 <div class="listingblock lines_space console-input">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">Each entry stated in the output can be set as a base_image in :.thoth.yaml: in the respective runtime environment section and used as a base for running the Python applications.</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">thamos images</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Each entry stated in the output can be set as a base_image in :.thoth.yaml: in the respective <a href="https://thoth-station.ninja/docs/developers/thamos/#overlays-directory">runtime environment section</a> and used as a base for running the Python applications.</p>
 </div>
 <div class="paragraph">
 <p>Project Thoth offers container <a href="https://developers.redhat.com/articles/2021/11/25/build-and-extend-containerized-applications-project-thoth#thoth_and_python_packaging_standards">image analyses</a> that introspect what is present in the container image. Notably, it can extract:</p>
@@ -137,7 +140,7 @@
 <p>Information about the ABI provided</p>
 </li>
 <li>
-<p>Container image metadata as extracted by Skopeo</p>
+<p>Container image metadata as extracted by <a href="https://github.com/containers/skopeo">Skopeo</a></p>
 </li>
 <li>
 <p>Information about other libraries, such as the CUDA version (GPU software) available</p>
@@ -145,7 +148,10 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>Thoth&#8217;s resolver considers the results of container image analyses listed earlier, along with available hardware, to guide the resolution process and come up with the best configuration for a given application.</p>
+<p>All these data can give you insights on the software that <a href="https://en.wikipedia.org/wiki/Software_bill_of_materials">is available for use</a>.</p>
+</div>
+<div class="paragraph">
+<p>Thoth&#8217;s resolver can consider the results of container image analyses listed earlier, along with available hardware and requirements for your application. This way, the resolution process can come up with <a href="https://thoth-station.ninja/docs/developers/adviser/introduction.html">the best possible software for the given application</a>.</p>
 </div>
 <div class="paragraph">
 <p>You can find more detail about Thoth&#8217;s security recommendations for containers and other Thoth functionalities in the following articles:</p>

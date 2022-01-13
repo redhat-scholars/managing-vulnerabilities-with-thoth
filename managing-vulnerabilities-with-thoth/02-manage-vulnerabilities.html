@@ -128,7 +128,7 @@ To use this example application, follow the steps mentioned above relative to th
 </div>
 <div class="paragraph">
 <p>This version of pillow is known for introducing a vulnerability further described on the <a href="https://github.com/pypa/advisory-db">pypa/advisory-db</a> repository.
-Thamos can also manage user requirements for dependencies using constraints files.
+Thamos can also manage user requirements for dependencies using <a href="https://pip.pypa.io/en/stable/user_guide/#constraints-files">constraints files</a>.
 To add pillow version 8.0.0 in your dependency requirements this way, you can simply write the package with its version into this file.</p>
 </div>
 </div>
@@ -254,7 +254,7 @@ To add pillow version 8.0.0 in your dependency requirements this way, you can si
 </div>
 </div>
 <div class="paragraph">
-<p>Thamos report should show that an error occured during the resolution process because a known vulnerability was found in pillow version 8.0.0 .</p>
+<p>Thamos report should show that an error occurred during the resolution process because a known vulnerability was found in pillow version 8.0.0. Thoth checks vulnerabilities of direct dependencies, but also possible vulnerabilities in indirect dependencies (also known as transitive dependencies of the application). The resolution process respects <a href="https://thoth-station.ninja/docs/developers/adviser/experimental_features.html#strict-index-configuration">Python package index configuration</a> to avoid possible <a href="https://developers.redhat.com/articles/2021/12/21/prevent-python-dependency-confusion-attacks-thoth#dependency_management_in_python">dependency confusion attacks</a>.</p>
 </div>
 </div>
 </div>
