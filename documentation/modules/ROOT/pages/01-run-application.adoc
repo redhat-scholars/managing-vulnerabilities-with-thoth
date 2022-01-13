@@ -4,6 +4,8 @@ include::_attributes.adoc[]
 This is an example of an application which uses Thoth's recommendations to recommend a software stack for specific security requirements. 
 The application is showing one of the Integration of Thoth using https://thoth-station.ninja/docs/developers/thamos/[Thamos CLI].
 
+image::cloud_resolver.png[align="center"]
+
 For OpenShift s2i (Source-To-Image) examples, visit https://github.com/thoth-station/s2i-example[thoth-station/s2i-example] repository.
 
 [#installation]
