@@ -9,9 +9,9 @@ Thoth can also provide security guidance for container images available for your
 [.lines_space]
 [.console-input]
 [source,bash]
-:thamos images:
+thamos images
 
-Each entry stated in the output can be set as a base_image in :.thoth.yaml: in the respective runtime environment section and used as a base for running the Python applications.
+Each entry stated in the output can be set as a base_image in :.thoth.yaml: in the respective https://thoth-station.ninja/docs/developers/thamos/#overlays-directory[runtime environment section] and used as a base for running the Python applications.
 
 Project Thoth offers container https://developers.redhat.com/articles/2021/11/25/build-and-extend-containerized-applications-project-thoth#thoth_and_python_packaging_standards[image analyses] that introspect what is present in the container image. Notably, it can extract:
 
@@ -20,10 +20,12 @@ Project Thoth offers container https://developers.redhat.com/articles/2021/11/25
 * Python packages that are present in the container image and their locations, if multiple virtual environments are available
 * Python interpreters and their available versions
 * Information about the ABI provided
-* Container image metadata as extracted by Skopeo
+* Container image metadata as extracted by https://github.com/containers/skopeo[Skopeo]
 * Information about other libraries, such as the CUDA version (GPU software) available
 
-Thoth's resolver considers the results of container image analyses listed earlier, along with available hardware, to guide the resolution process and come up with the best configuration for a given application. 
+All these data can give you insights on the software that https://en.wikipedia.org/wiki/Software_bill_of_materials[is available for use].
+
+Thoth's resolver can consider the results of container image analyses listed earlier, along with available hardware and requirements for your application. This way, the resolution process can come up with https://thoth-station.ninja/docs/developers/adviser/introduction.html[the best possible software for the given application].
 
 You can find more detail about Thoth's security recommendations for containers and other Thoth functionalities in the following articles:
 
