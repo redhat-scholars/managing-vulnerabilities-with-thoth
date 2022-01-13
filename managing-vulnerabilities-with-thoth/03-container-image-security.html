@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Welcome to the Managing Vulnerabilities with Thoth Tutorial :: Managing Vulnerabilities with Thoth</title>
-    <link rel="canonical" href="https://redhat-scholars.github.io/managing-vulnerabilities-with-thoth/managing-vulnerabilities-with-thoth/index.html">
-    <link rel="next" href="01-run-application.html">
+    <title>Container Image Security with Thoth :: Managing Vulnerabilities with Thoth</title>
+    <link rel="canonical" href="https://redhat-scholars.github.io/managing-vulnerabilities-with-thoth/managing-vulnerabilities-with-thoth/03-container-image-security.html">
+    <link rel="prev" href="02-manage-vulnerabilities.html">
     <meta name="generator" content="Antora 3.0.0">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
@@ -74,12 +74,12 @@
   </li>
 </ul>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="03-container-image-security.html">Container Image Security with Thoth</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="03-container-image-security.html#image-guidance">Container Image Security Guidance</a>
+    <a class="nav-link" href="#image-guidance">Container Image Security Guidance</a>
   </li>
 </ul>
   </li>
@@ -97,69 +97,82 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Managing Vulnerabilities with Thoth</a></li>
-    <li><a href="index.html">Welcome to the Managing Vulnerabilities with Thoth Tutorial</a></li>
+    <li><a href="03-container-image-security.html">Container Image Security with Thoth</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/redhat-scholars/managing-vulnerabilities-with-thoth/edit/master/documentation/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/redhat-scholars/managing-vulnerabilities-with-thoth/edit/master/documentation/modules/ROOT/pages/03-container-image-security.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Welcome to the Managing Vulnerabilities with Thoth Tutorial</h1>
-<div id="preamble">
-<div class="sectionbody">
-<div class="imageblock">
-<div class="content">
-<img src="_images/thoth-station.png" alt="thoth station">
-</div>
-</div>
-</div>
-</div>
-<div class="sect1 text-center strong">
-<h2>Introduction</h2>
+<h1 class="page">Container Image Security with Thoth</h1>
+<div class="sect1">
+<h2 id="image-guidance"><a class="anchor" href="#image-guidance"></a>Container Image Security Guidance</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In this tutorial, we are going to demonstrate how to manage vulnerabilities in Python applications with Thoth via the Thamos CLI.
-This track includes an example of an application which uses Thoth&#8217;s recommendations to recommend a software stack for specific security requirements.</p>
+<p>Thoth can also provide security guidance for container images available for your application with the command:</p>
+</div>
+<div class="listingblock lines_space console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">Each entry stated in the output can be set as a base_image in :.thoth.yaml: in the respective runtime environment section and used as a base for running the Python applications.</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Project Thoth offers container <a href="https://developers.redhat.com/articles/2021/11/25/build-and-extend-containerized-applications-project-thoth#thoth_and_python_packaging_standards">image analyses</a> that introspect what is present in the container image. Notably, it can extract:</p>
 </div>
-<div class="sect1 tiles browse">
-<h2>Browse modules</h2>
-<div class="sectionbody">
-<div class="ulist tile">
-<div class="title"><a href="01-run-application.html" class="xref page">Running the Application</a></div>
+<div class="ulist">
 <ul>
 <li>
-<p><a href="01-run-application.html#installation" class="xref page">Installing the Thamos CLI</a></p>
+<p>Information about the operating system</p>
+</li>
+<li>
+<p>Information about RPM packages that are present in the container image</p>
+</li>
+<li>
+<p>Python packages that are present in the container image and their locations, if multiple virtual environments are available</p>
+</li>
+<li>
+<p>Python interpreters and their available versions</p>
+</li>
+<li>
+<p>Information about the ABI provided</p>
+</li>
+<li>
+<p>Container image metadata as extracted by Skopeo</p>
+</li>
+<li>
+<p>Information about other libraries, such as the CUDA version (GPU software) available</p>
 </li>
 </ul>
 </div>
-<div class="ulist tile">
-<div class="title"><a href="02-manage-vulnerabilities.html" class="xref page">Managing Vulnerabilities with Thamos</a></div>
-<ul>
-<li>
-<p><a href="02-manage-vulnerabilities.html#introduce-vulnerability" class="xref page">Introducing a Vulnerability</a></p>
-</li>
-<li>
-<p><a href="02-manage-vulnerabilities.html#thamos-resolution" class="xref page">Resolving Security Issues with Thamos</a></p>
-</li>
-<li>
-<p><a href="02-manage-vulnerabilities.html#run-application" class="xref page">Running the Example Application</a></p>
-</li>
-</ul>
+<div class="paragraph">
+<p>Thoth&#8217;s resolver considers the results of container image analyses listed earlier, along with available hardware, to guide the resolution process and come up with the best configuration for a given application.</p>
 </div>
-<div class="ulist tile">
-<div class="title"><a href="03-container-image-security.html" class="xref page">Container Image Security with Thoth</a></div>
+<div class="paragraph">
+<p>You can find more detail about Thoth&#8217;s security recommendations for containers and other Thoth functionalities in the following articles:</p>
+</div>
+<div class="ulist">
 <ul>
 <li>
-<p><a href="03-container-image-security.html#image-guidance" class="xref page">Container Image Security Guidance</a></p>
+<p><a href="https://developers.redhat.com/articles/2021/11/17/customize-python-dependency-resolution-machine-learning">Customize Python dependency resolution with machine learning</a></p>
+</li>
+<li>
+<p><a href="https://developers.redhat.com/articles/2021/11/25/build-and-extend-containerized-applications-project-thoth">Build and extend containerized applications with Project Thoth</a></p>
+</li>
+<li>
+<p><a href="https://developers.redhat.com/articles/2021/09/29/secure-your-python-applications-thoth-recommendations">Secure your Python applications with Thoth recommendations</a></p>
+</li>
+<li>
+<p><a href="https://developers.redhat.com/articles/2021/12/21/prevent-python-dependency-confusion-attacks-thoth">Prevent Python dependency confusion attacks with Thoth</a></p>
+</li>
+<li>
+<p><a href="https://developers.redhat.com/articles/2021/09/22/thoth-prescriptions-resolving-python-dependencies">Thoth prescriptions for resolving Python dependencies</a></p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <nav class="pagination">
-  <span class="next"><a href="01-run-application.html">1. Running the Application</a></span>
+  <span class="prev"><a href="02-manage-vulnerabilities.html">2. Managing Vulnerabilities with Thamos</a></span>
 </nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
