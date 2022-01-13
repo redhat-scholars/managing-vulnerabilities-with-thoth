@@ -24,3 +24,11 @@ Project Thoth offers container https://developers.redhat.com/articles/2021/11/25
 * Information about other libraries, such as the CUDA version (GPU software) available
 
 Thoth's resolver considers the results of container image analyses listed earlier, along with available hardware, to guide the resolution process and come up with the best configuration for a given application. 
+
+You can find more detail about Thoth's security recommendations for containers and other Thoth functionalities in the following articles:
+
+* https://developers.redhat.com/articles/2021/11/17/customize-python-dependency-resolution-machine-learning[Customize Python dependency resolution with machine learning]
+* https://developers.redhat.com/articles/2021/11/25/build-and-extend-containerized-applications-project-thoth[Build and extend containerized applications with Project Thoth]
+* https://developers.redhat.com/articles/2021/09/29/secure-your-python-applications-thoth-recommendations[Secure your Python applications with Thoth recommendations]
+* https://developers.redhat.com/articles/2021/12/21/prevent-python-dependency-confusion-attacks-thoth[Prevent Python dependency confusion attacks with Thoth]
+* https://developers.redhat.com/articles/2021/09/22/thoth-prescriptions-resolving-python-dependencies[Thoth prescriptions for resolving Python dependencies]
