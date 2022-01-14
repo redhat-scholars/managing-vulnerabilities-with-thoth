@@ -28,6 +28,8 @@ To add pillow version 8.0.0 in your dependency requirements this way, you can si
 
 To get a stack guidance based on security, run the following command:
 
+IMPORTANT: The resolution process might take some time as the resolver explores resolution possibilities in the dependency graph (unless cached results are already available).
+
 [.lines_space]
 [.console-input]
 [source,bash]
