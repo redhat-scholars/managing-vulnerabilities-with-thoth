@@ -282,3 +282,9 @@ thamos log
 2022-01-12 13:13:14,662 thoth.adviser.resolver      INFO: Resolver took 1.699 seconds in total, pipeline speed 0.588581 stacks/second
 2022-01-12 13:13:14,662 thoth.adviser.resolver      INFO: The highest rated software stack resolved has a score of 0.00
 2022-01-12 13:13:14,662 thoth.adviser.resolver      INFO: Pipeline strides discarded 0 and accepted 1 software stacks in total
+
+++++
+<script>
+document.getElementsByClassName("doc")[0].style.maxWidth = "100%";
+</script>
+++++
