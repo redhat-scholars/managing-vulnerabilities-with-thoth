@@ -34,3 +34,9 @@ You can find more detail about Thoth's security recommendations for containers a
 * https://developers.redhat.com/articles/2021/09/29/secure-your-python-applications-thoth-recommendations[Secure your Python applications with Thoth recommendations]
 * https://developers.redhat.com/articles/2021/12/21/prevent-python-dependency-confusion-attacks-thoth[Prevent Python dependency confusion attacks with Thoth]
 * https://developers.redhat.com/articles/2021/09/22/thoth-prescriptions-resolving-python-dependencies[Thoth prescriptions for resolving Python dependencies]
+
+++++
+<script>
+document.getElementsByClassName("doc")[0].style.maxWidth = "100%";
+</script>
+++++
