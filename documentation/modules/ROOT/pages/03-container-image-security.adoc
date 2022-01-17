@@ -23,7 +23,7 @@ Project Thoth offers container https://developers.redhat.com/articles/2021/11/25
 * Container image metadata as extracted by https://github.com/containers/skopeo[Skopeo]
 * Information about other libraries, such as the CUDA version (GPU software) available
 
-All these data can give you insights on the software that is available for use. Together with static analysis of container images as performed by Quay Clair https://github.com/quay/clair[Quay Clair], Thoth guides also on the base container image security.
+All these data can give you insights on the software that is available for use. Together with static analysis of container images as performed by https://github.com/quay/clair[Quay Clair], Thoth guides also on the base container image security.
 
 Thoth's resolver can consider the results of container image analyses listed earlier, along with available hardware and requirements for your application. This way, the resolution process can come up with https://thoth-station.ninja/docs/developers/adviser/introduction.html[the best possible software for the given application].
 
