@@ -31,3 +31,9 @@ If you are interest in Thoth, feel free to follow https://twitter.com/ThothStati
 
 [.tile]
 .xref:04-references.adoc[References]
+
+++++
+<script>
+document.getElementsByClassName("doc")[0].style.maxWidth = "100%";
+</script>
+++++
