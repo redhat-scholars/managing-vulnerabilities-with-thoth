@@ -8,3 +8,5 @@
 
 * xref:03-container-image-security.adoc[3. Container Image Security with Thoth]
 ** xref:03-container-image-security.adoc#image-guidance[Container Image Security Guidance]
+
+*xref:04-references.adoc[4. References]
