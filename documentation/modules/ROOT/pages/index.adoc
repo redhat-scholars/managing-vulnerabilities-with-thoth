@@ -28,3 +28,9 @@ If you are interest in Thoth, feel free to follow https://twitter.com/ThothStati
 [.tile]
 .xref:03-container-image-security.adoc[Container Image Security with Thoth]
 * xref:03-container-image-security.adoc#image-guidance[Container Image Security Guidance]
+
+++++
+<script>
+document.getElementsByClassName("doc")[0].style.maxWidth = "100%";
+</script>
+++++
