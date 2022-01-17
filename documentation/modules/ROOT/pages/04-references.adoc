@@ -1,7 +1,7 @@
 = References
 include::_attributes.adoc[]
 
-You can find more detail about Thoth's security recommendations and other Thoth functionalities in the following articles:
+You can find more detail about Thoth's security recommendations and other Thoth functionalities on our social media accounts and in the following articles:
 
 * https://thoth-station.ninja[Thoth homepage]
 * https://twitter.com/ThothStation[@ThothStation on Twitter]
