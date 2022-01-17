@@ -1,8 +1,11 @@
 = References
 include::_attributes.adoc[]
 
-You can find more detail about Thoth's security recommendations for containers and other Thoth functionalities in the following articles:
+You can find more detail about Thoth's security recommendations and other Thoth functionalities in the following articles:
 
+* https://thoth-station.ninja[Thoth homepage]
+* https://twitter.com/ThothStation[@ThothStation on Twitter]
+* https://www.youtube.com/channel/UClUIDuq_hQ6vlzmqM59B2Lw[Thoth Station on YouTube]
 * https://developers.redhat.com/articles/2021/11/17/customize-python-dependency-resolution-machine-learning[Customize Python dependency resolution with machine learning]
 * https://developers.redhat.com/articles/2021/11/25/build-and-extend-containerized-applications-project-thoth[Build and extend containerized applications with Project Thoth]
 * https://developers.redhat.com/articles/2021/09/29/secure-your-python-applications-thoth-recommendations[Secure your Python applications with Thoth recommendations]
