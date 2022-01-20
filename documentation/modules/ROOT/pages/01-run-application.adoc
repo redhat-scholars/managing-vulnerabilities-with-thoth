@@ -56,7 +56,7 @@ Commands:
   version           Print Thamos and Thoth version and exit.
   whatprovides      For a given import returns list of packages with...
 
-The pre-configured template for Thamos CLI is available in the .thoth.yaml file:
+The pre-configured template for Thamos CLI is available in the ``.thoth.yaml`` file:
 
 [.lines_space]
 [.console-input]
@@ -241,7 +241,7 @@ thamos advise
   https://thoth-station.ninja/j/no_cve                                │ No known CVE known for 'pygame' in version '2.1.0'                                   │ pygame       │ ✔️ INFO     
   https://pypi.org/project/pygame/2.1.0/                              │ Package 'pygame' in version '2.1.0' is released on PyPI                              │ pygame       │ ✔️ INFO     
 
-This might take some time. Once Thoth recommends you the application stack to be used for running the application, you can use Thamos to create a Python environment (based on configuration in :.thoth.yaml:) and install the recommended requirements into it:
+This might take some time. Once Thoth recommends you the application stack to be used for running the application, you can use Thamos to create a Python environment (based on configuration in ``.thoth.yaml``) and install the recommended requirements into it:
 
 [.lines_space]
 [.console-input]
