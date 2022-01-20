@@ -11,7 +11,7 @@ Thoth can also provide security guidance for container images available for your
 [source,bash]
 thamos images
 
-Each entry stated in the output can be set as a base_image in :.thoth.yaml: in the respective https://thoth-station.ninja/docs/developers/thamos/#overlays-directory[runtime environment section] and used as a base for running the Python applications.
+Each entry stated in the output can be set as a base_image in ``.thoth.yaml`` in the respective https://thoth-station.ninja/docs/developers/thamos/#overlays-directory[runtime environment section] and used as a base for running the Python applications.
 
 Project Thoth offers container https://developers.redhat.com/articles/2021/11/25/build-and-extend-containerized-applications-project-thoth#thoth_and_python_packaging_standards[image analyses] that introspect what is present in the container image. Notably, it can extract:
 
