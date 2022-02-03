@@ -253,7 +253,7 @@ And finally, run the application:
 [.lines_space]
 [.console-input]
 [source,bash]
-thamos run ./game_of_life.py
+thamos run --no-pedantic ./game_of_life.py
 
 [.lines_space]
 [.console-output]
