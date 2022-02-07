@@ -17,7 +17,7 @@ First, you need to clone the https://github.com/thoth-station/cli-examples/[thot
 [.lines_space]
 [.console-input]
 [source,bash]
-git clone https://github.com/thoth-station/cli-example.git && cd cli-example
+git clone https://github.com/thoth-station/cli-examples.git && cd cli-examples
 pip3 install thamos
 thamos --help
 
