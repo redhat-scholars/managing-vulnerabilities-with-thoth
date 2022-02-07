@@ -154,7 +154,7 @@ To launch the example application with the resolved dependencies, run:
 [.lines_space]
 [.console-input]
 [source,bash]
-thamos run ./game_of_life.py
+thamos run --no-pedantic ./game_of_life.py
 
 To launch a new game with the default parameters or choose your own parameters as specified in the help section. Click on the coordinates to select your first generation of individuals and press p to see next generations.
 
