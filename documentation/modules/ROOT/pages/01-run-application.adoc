@@ -2,7 +2,7 @@
 include::_attributes.adoc[]
 
 This is an example of an application which uses https://thoth-station.ninja[Thoth's recommendations] to recommend a software stack for specific security requirements. 
-The application is showing one of the Integration of Thoth using https://thoth-station.ninja/docs/developers/thamos/[Thamos CLI].
+The application is showing one of the Integration of Thoth using https://thoth-station.ninja/docs/developers/thamos/[Thamos CLI]. For an extended overview of Thoth features, check https://www.youtube.com/watch?v=UCt37waSa6g[the following video tutorial].
 
 image::cloud_resolver.png[align="center"]
 
