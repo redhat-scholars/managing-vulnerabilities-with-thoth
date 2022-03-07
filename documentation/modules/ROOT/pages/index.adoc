@@ -13,7 +13,7 @@ This track includes an example of an application which uses Thoth's recommendati
 ++++
 <center>
 ++++
-video::2CFkHlSewKY[youtube,width=480, height=480]
+video::2CFkHlSewKY[youtube,width=480, height=300]
 ++++
 </center>
 ++++
