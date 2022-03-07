@@ -10,7 +10,13 @@ image::thoth-station.png[]
 In this tutorial, we are going to demonstrate how to manage vulnerabilities in Python applications with https://thoth-station.ninja[Thoth] (https://www.redhat.com/en/topics/devops/what-is-devsecops[AIDevSecOps]) via the Thamos CLI.
 This track includes an example of an application which uses Thoth's recommendations to recommend a software stack for specific security requirements. See also https://developers.redhat.com/articles/2022/03/07/manage-python-security-thoths-cloud-based-dependency-resolver[Manage Python security with Thoth's cloud-based dependency resolver] article published.
 
-video::2CFkHlSewKY[youtube]
+++++
+<center>
+++++
+video::2CFkHlSewKY[youtube,width=480]
+++++
+</center>
+++++
 
 If you are interest in Thoth, feel free to follow https://twitter.com/ThothStation[@ThothStation Twitter handle] or follow https://www.youtube.com/channel/UClUIDuq_hQ6vlzmqM59B2Lw[Thoth Station on YouTube].
 
