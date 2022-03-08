@@ -77,22 +77,6 @@ runtime_environments:
       version: "8"
     python_version: "3.8"
     recommendation_type: latest
-managers:
-  - name: update
-    configuration:
-      labels: [bot]
-  - name: info
-  - name: version
-    configuration:
-      maintainers:
-        - fridex
-        - goern
-        - harshad16
-        - pacospace
-      assignees:
-        - sesheta
-      labels: [bot]
-      changelog_file: true
 
 Now you are ready to ask for advice:
 
