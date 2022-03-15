@@ -149,7 +149,7 @@ Thamos report should show that an error occurred during the resolution process b
 == Running the Example Application
 
 Now that you know how Thamos prevents the use of unsafe dependencies in your application, you can revert to another version of pillow to complete this part of the tutorial. 
-To launch the example application with the resolved dependencies, run:
+To launch the example application with the resolved dependencies, run (Python 3.8 is required):
 
 [.lines_space]
 [.console-input]
