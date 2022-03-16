@@ -24,38 +24,48 @@ thamos --help
 [.lines_space]
 [.console-output]
 [source,bash]
+Thoth homepage: https://thoth-station.ninja                                                                                                                  
 Usage: thamos [OPTIONS] COMMAND [ARGS]...
-  CLI tool for interacting with Thoth.
-Options:
-  -v, --verbose          Be verbose about what's going on.
-  -d, --workdir DIR      Adjust working directory for sub-commands.
-  -t, --thoth-host HOST  Use selected host instead of the one stated in the
-                         configuration file.
-  --help                 Show this message and exit.
-Commands:
-  add               Add one or multiple requirements to the project.
-  advise            Ask Thoth for recommendations on the application stack.
-  check             Check the configuration file and runtime environment.
-  config            Adjust Thamos and Thoth configuration.
-  discover          Discover packages used in the project or in the file.
-  environments      Show available Python environments.
-  graph             Show dependency graph of resolved dependencies.
-  images            Check available Thoth container images.
-  indexes           List available Python package indexes.
-  install           Install dependencies as stated in the lock file.
-  list              List available runtime environments configured.
-  log               Get log of running or finished analysis.
-  provenance-check  Check provenance of installed packages.
-  purge             Remove virtual environment created.
-  remove            Remove the given requirement.
-  run               Run the command in virtual environment.
-  show              Show details for configured runtime environments.
-  status            Get status of an analysis.
-  support           Collect information from the current environment to...
-  venv              Get path of the virtual environment.
-  version           Print Thamos and Thoth version and exit.
-  whatprovides      For a given import returns list of packages with...
-
+CLI tool for interacting with Thoth.                                                                                                                         
+╭─ Options ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│  --verbose     -v        Be verbose about what's going on.                                                                                                 │
+│  --workdir     -d  DIR   Adjust working directory for sub-commands.                                                                                        │
+│  --thoth-host  -t  HOST  Use selected host instead of the one stated in the configuration file.                                                            │
+│  --help                  Show this message and exit.                                                                                                       │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Thoth resolver ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│  advise            Ask Thoth for recommendations on the application stack.                                                                                 │
+│  environments      Show available Python environments.                                                                                                     │
+│  graph             Show dependency graph of resolved dependencies.                                                                                         │
+│  images            Check available Thoth container images.                                                                                                 │
+│  indexes           List available Python package indexes.                                                                                                  │
+│  log               Get log of running or finished analysis.                                                                                                │
+│  provenance-check  Check provenance of installed packages.                                                                                                 │
+│  status            Get status of an analysis.                                                                                                              │
+│  whatprovides      Check packages providing the given import.                                                                                              │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Application & Requirements ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│  add       Add one or multiple requirements to the project.                                                                                                │
+│  discover  Discover packages used in the project.                                                                                                          │
+│  install   Install dependencies as stated in the lock file.                                                                                                │
+│  purge     Remove virtual environment created.                                                                                                             │
+│  remove    Remove the given requirement.                                                                                                                   │
+│  run       Run the command in virtual environment.                                                                                                         │
+│  venv      Get path of the virtual environment.                                                                                                            │
+│  verify    Check lock file freshness.                                                                                                                      │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Runtime environments ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│  check   Check the configuration file and runtime environment.                                                                                             │
+│  config  Adjust Thamos and Thoth configuration.                                                                                                            │
+│  list    List available runtime environments configured.                                                                                                   │
+│  show    Show details for configured runtime environments.                                                                                                 │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Information ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│  support  Collect environment and configuration information.                                                                                               │
+│  version  Print Thamos and Thoth version and exit.                                                                                                         │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+Check Thamos documentation: https://thoth-station.ninja/docs/developers/thamos
+ 
 The pre-configured template for Thamos CLI is available in the ``.thoth.yaml`` file:
 
 [.lines_space]
