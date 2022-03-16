@@ -21,6 +21,10 @@ git clone https://github.com/thoth-station/cli-examples.git && cd cli-examples
 pip3 install thamos
 thamos --help
 
+TIP: Use the following prepared containerized environment for a reproducible run:
+[.console-input]
+docker run --rm -it --entrypoint bash quay.io/thoth-station/s2i-thoth-f34-py39:v0.32.3  # or use podman
+
 [.lines_space]
 [.console-output]
 [source,bash]
