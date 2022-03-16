@@ -88,142 +88,166 @@ thamos advise
 [.lines_space]
 [.console-output]
 [source,bash]
-2022-01-12 14:13:04,386 [216677] INFO     thamos.lib: Successfully submitted advise analysis 'adviser-220112131303-8ded376834740706' to 'https://khemenu.thoth-station.ninja/api/v1'
-                                                                               Application stack guidance                                                                                
-                                                                                   ╷                                                                                        ╷            
-  Link                                                                             │ Message                                                                                │ Type       
- ══════════════════════════════════════════════════════════════════════════════════╪════════════════════════════════════════════════════════════════════════════════════════╪═══════════ 
-  https://quay.io/repository/thoth-station/ps-cv-ocr                               │ Consider using a computer vision predictable stack 'ps-cv-ocr' that has prepared       │ ✔️ INFO     
-                                                                                   │ environment with 'pillow'                                                              │            
-  https://quay.io/repository/thoth-station/ps-cv-pytorch                           │ Consider using a computer vision predictable stack 'ps-cv-pytorch' that has prepared   │ ✔️ INFO     
-                                                                                   │ environment with 'pillow'                                                              │            
-  https://quay.io/repository/thoth-station/ps-cv-tensorflow                        │ Consider using a computer vision predictable stack 'ps-cv-tensorflow' that has         │ ✔️ INFO     
-                                                                                   │ prepared environment with 'pillow'                                                     │            
-  https://quay.io/repository/thoth-station/ps-ip-ifd                               │ Consider using a image processing predictable stack 'ps-ip-ifd' that has prepared      │ ✔️ INFO     
-                                                                                   │ environment with 'pillow'                                                              │            
-  https://thoth-station.ninja/search/adviser-220112131303-8ded376834740706/summary │ Results can be browsed in Thoth search                                                 │ ✔️ INFO     
-  https://thoth-station.ninja/j/cve_timestamp                                      │ CVE database of known vulnerabilities for Python packages was updated at               │ ⚠️ WARNING  
-                                                                                   │ '2021-12-20T00:00:04.615854'                                                           │            
-  https://thoth-station.ninja/j/lax_version                                        │ No version range specifier for 'asyncclick' found, it is recommended to specify        │ ⚠️ WARNING  
-                                                                                   │ version ranges in requirements                                                         │            
-  https://thoth-station.ninja/j/lax_version                                        │ No version range specifier for 'click' found, it is recommended to specify version     │ ⚠️ WARNING  
-                                                                                   │ ranges in requirements                                                                 │            
-  https://thoth-station.ninja/j/lax_version                                        │ No version range specifier for 'pillow' found, it is recommended to specify version    │ ⚠️ WARNING  
-                                                                                   │ ranges in requirements                                                                 │            
-  https://thoth-station.ninja/j/lax_version                                        │ No version range specifier for 'pygame' found, it is recommended to specify version    │ ⚠️ WARNING  
-                                                                                   │ ranges in requirements                                                                 │            
-  https://thoth-station.ninja/j/thoth_s2i                                          │ It is recommended to use Thoth's s2i to have recommendations specific to runtime       │ ✔️ INFO     
-                                                                                   │ environment                                                                            │            
-  https://thoth-station.ninja/j/rhel_ubi                                           │ Using observations for RHEL instead of UBI, RHEL is ABI compatible with UBI            │ ⚠️ WARNING  
-  https://thoth-station.ninja/recommendation-types/                                │ Using recommendation type 'latest'                                                     │ ✔️ INFO     
-  https://thoth-station.ninja/j/env                                                │ Resolving for runtime environment named 'ubi8'                                         │ ✔️ INFO     
-  https://thoth-station.ninja/j/env                                                │ Resolving for operating system 'rhel' in version '8'                                   │ -          
-  https://thoth-station.ninja/j/env                                                │ Resolving for Python version '3.8'                                                     │ ✔️ INFO     
-  https://thoth-station.ninja/j/env                                                │ Using platform 'linux-x86_64'                                                          │ ✔️ INFO     
-  https://thoth-station.ninja/j/env                                                │ No constraints supplied to the resolution process                                      │ ✔️ INFO     
-  https://thoth-station.ninja/j/env                                                │ Using supplied static source code analysis                                             │ ✔️ INFO     
-  https://thoth-station.ninja/j/env                                                │ No containerized environment used                                                      │ ✔️ INFO     
-  https://thoth-station.ninja/j/env                                                │ Using CPU family 'UNKNWON' model 'UNKNOWN'                                             │ ✔️ INFO     
-  https://thoth-station.ninja/j/env                                                │ No CUDA used                                                                           │ ✔️ INFO     
-  https://thoth-station.ninja/j/env                                                │ No cuDNN used                                                                          │ ✔️ INFO     
-  https://thoth-station.ninja/j/env                                                │ No OpenBLAS used                                                                       │ ✔️ INFO     
-  https://thoth-station.ninja/j/env                                                │ No OpenMPI used                                                                        │ ✔️ INFO     
-  https://thoth-station.ninja/j/env                                                │ No MKL used                                                                            │ ✔️ INFO     
-  https://thoth-station.ninja/j/eol_env                                            │ Runtime environment used is no longer supported, it is recommended to switch to        │ ⚠️ WARNING  
-                                                                                   │ another runtime environment                                                            │            
-  https://thoth-station.ninja/j/prescription                                       │ Using prescriptions 'thoth' release 'v0.13.0'                                          │ ✔️ INFO     
-  https://github.com/thoth-station/prescriptions                                   │ Using resolver prescriptions from thoth-station/prescriptions                          │ ✔️ INFO     
-  https://thoth-station.ninja/j/no_cpu                                             │ No CPU model provided, please state CPU model in your .thoth.yaml configuration file   │ ⚠️ WARNING  
-                                                                                   │ to have recommendations optimized for your runtime environment                         │            
-  https://thoth-station.ninja/j/no_cpu                                             │ No CPU family provided, please state CPU family in your .thoth.yaml configuration file │ ⚠️ WARNING  
-                                                                                   │ to have recommendations optimized for your runtime environment                         │            
-  https://thoth-station.ninja/j/rules                                              │ Removing package 'click' in versions '<=6.6' from index 'https://pypi.org/simple'      │ ⚠️ WARNING  
-                                                                                   │ based on rule: Package released before December 2016                                   │            
-  https://thoth-station.ninja/j/rules                                              │ Removing package 'pillow' in versions '<=3.4.2' from index 'https://pypi.org/simple'   │ ⚠️ WARNING  
-                                                                                   │ based on rule: Package released before December 2016                                   │            
-  https://thoth-station.ninja/j/install_error                                      │ The following versions of 'asyncclick' from                                            │ ⚠️ WARNING  
-                                                                                   │ 'https://tensorflow.pypi.thoth-station.ninja/index/manylinux2010/AVX2/simple' were     │            
-                                                                                   │ removed due to installation issues in the target environment: 7.0.3                    │            
-  https://thoth-station.ninja/j/install_error                                      │ The following versions of 'click' from                                                 │ ⚠️ WARNING  
-                                                                                   │ 'https://tensorflow.pypi.thoth-station.ninja/index/manylinux2010/AVX2/simple' were     │            
-                                                                                   │ removed due to installation issues in the target environment: 8.0.2                    │            
-  https://thoth-station.ninja/j/install_error                                      │ The following versions of 'pillow' from 'https://pypi.org/simple' were removed due to  │ ⚠️ WARNING  
-                                                                                   │ installation issues in the target environment: 1.7.8, 1.7.7, 1.7.6, 1.7.5, 1.7.4,      │            
-                                                                                   │ 1.7.3, 1.7.2, 1.7.1, 1.7.0, 1.6, 1.5, 1.4, 1.3, 1.2, 1.1, 1.0                          │            
-  https://thoth-station.ninja/j/install_error                                      │ The following versions of 'pygame' from 'https://pypi.org/simple' were removed due to  │ ⚠️ WARNING  
-                                                                                   │ installation issues in the target environment: 1.9.6, 1.9.5, 1.9.4, 1.9.3, 1.9.2       │            
-                                                                                   ╵                                                                                        ╵            
-                                                                                Recommended stack report                                                                                 
-                                                                      ╷                                                                                      ╷              ╷            
-  Link                                                                │ Message                                                                              │ Package name │ Type       
- ═════════════════════════════════════════════════════════════════════╪══════════════════════════════════════════════════════════════════════════════════════╪══════════════╪═══════════ 
-  https://github.com/thoth-station/s2i-thoth/                         │ See S2I Thoth base images and their docs for more info                               │ -            │ ✔️ INFO     
-  https://stackoverflow.com/questions/tagged/python-3.8               │ See StackOverflow tags specific for Python 3.8                                       │ -            │ ✔️ INFO     
-  https://thoth-station.ninja/recommendation-types/                   │ The recommended software stack was computed based on the 'latest' recommendation     │ -            │ ✔️ INFO     
-                                                                      │ type                                                                                 │              │            
-  https://thoth-station.ninja/search/package/asyncclick/8.0.1.2       │ Browse Thoth Search UI for 'asyncclick==8.0.1.2'                                     │ asyncclick   │ ✔️ INFO     
-  https://libraries.io/pypi/asyncclick/                               │ Information about 'asyncclick' on libraries.io                                       │ asyncclick   │ ✔️ INFO     
-  https://thoth-station.ninja/j/no_cve                                │ No known CVE known for 'asyncclick' in version '8.0.1.2'                             │ asyncclick   │ ✔️ INFO     
-  https://pypi.org/project/asyncclick/8.0.1.2/                        │ Package 'asyncclick' in version '8.0.1.2' is released on PyPI                        │ asyncclick   │ ✔️ INFO     
-  https://thoth-station.ninja/search/package/click/8.0.2              │ Browse Thoth Search UI for 'click==8.0.2'                                            │ click        │ ✔️ INFO     
-  https://libraries.io/pypi/click/                                    │ Information about 'click' on libraries.io                                            │ click        │ ✔️ INFO     
-  https://thoth-station.ninja/j/no_cve                                │ No known CVE known for 'click' in version '8.0.2'                                    │ click        │ ✔️ INFO     
-  https://pypi.org/project/click/8.0.2/                               │ Package 'click' in version '8.0.2' is released on PyPI                               │ click        │ ✔️ INFO     
-  https://github.com/pallets/click                                    │ Package 'click' is hosted on GitHub                                                  │ click        │ ✔️ INFO     
-  https://github.com/pallets/click                                    │ Project 'click' has very high popularity on GitHub                                   │ click        │ ✔️ INFO     
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project does not have binary artifacts in the source repository                      │ click        │ ✔️ INFO     
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project does not have open or unfixed vulnerabilities on the OSV service based on    │ click        │ ✔️ INFO     
-                                                                      │ Security Scorecards                                                                  │              │            
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project has a security policy published based on Security Scorecards                 │ click        │ ✔️ INFO     
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project has a set of contributors from multiple companies based on Security          │ click        │ ✔️ INFO     
-                                                                      │ Scorecards                                                                           │              │            
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project is actively maintained based on Security Scorecards                          │ click        │ ✔️ INFO     
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project requires code review before the code is merged based on Security Scorecards  │ click        │ ✔️ INFO     
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project runs CI tests before pull requests are merged based on Security Scorecards   │ click        │ ✔️ INFO     
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project uses tools for automatic dependency updates based on Security Scorecards     │ click        │ ✔️ INFO     
-  https://github.com/pallets/click/releases/tag/8.0.2                 │ Release notes for package 'click'                                                    │ click        │ ✔️ INFO     
-  https://click.palletsprojects.com/                                  │ See Click project documentation                                                      │ click        │ ✔️ INFO     
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project does NOT cryptographically sign tags based on Security Scorecards            │ click        │ ⚠️ WARNING  
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project does NOT follow the principle of least privileged in GitHub workflows based  │ click        │ ⚠️ WARNING  
-                                                                      │ on Security Scorecards                                                               │              │            
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project does NOT have branch protection setup based on Security Scorecards           │ click        │ ⚠️ WARNING  
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project does NOT honour CII Best Practices based on Security Scorecards              │ click        │ ⚠️ WARNING  
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project does NOT use pinned dependencies based on Security Scorecards                │ click        │ ⚠️ WARNING  
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project does NOT use static source code analysis based on Security Scorecards        │ click        │ ⚠️ WARNING  
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project does not use fuzzing based on Security Scorecards                            │ click        │ ⚠️ WARNING  
-  https://thoth-station.ninja/search/package/pillow/8.3.2             │ Browse Thoth Search UI for 'pillow==8.3.2'                                           │ pillow       │ ✔️ INFO     
-  https://libraries.io/pypi/pillow/                                   │ Information about 'pillow' on libraries.io                                           │ pillow       │ ✔️ INFO     
-  https://pypi.org/project/pillow/8.3.2/#files                        │ Installed artifact size for package 'pillow' in version '8.3.2' can have up to       │ pillow       │ ✔️ INFO     
-                                                                      │ 46.53MiB                                                                             │              │            
-  https://thoth-station.ninja/j/no_cve                                │ No known CVE known for 'pillow' in version '8.3.2'                                   │ pillow       │ ✔️ INFO     
-  https://pypi.org/project/pillow/8.3.2/                              │ Package 'pillow' in version '8.3.2' is released on PyPI                              │ pillow       │ ✔️ INFO     
-  https://github.com/python-pillow/Pillow                             │ Package 'pillow' is hosted on GitHub                                                 │ pillow       │ ✔️ INFO     
-  https://github.com/python-pillow/Pillow                             │ Project 'pillow' has very high popularity on GitHub                                  │ pillow       │ ✔️ INFO     
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project does not have open or unfixed vulnerabilities on the OSV service based on    │ pillow       │ ✔️ INFO     
-                                                                      │ Security Scorecards                                                                  │              │            
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project has a set of contributors from multiple companies based on Security          │ pillow       │ ✔️ INFO     
-                                                                      │ Scorecards                                                                           │              │            
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project is actively maintained based on Security Scorecards                          │ pillow       │ ✔️ INFO     
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project is published as a package based on Security Scorecards                       │ pillow       │ ✔️ INFO     
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project requires code review before the code is merged based on Security Scorecards  │ pillow       │ ✔️ INFO     
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project runs CI tests before pull requests are merged based on Security Scorecards   │ pillow       │ ✔️ INFO     
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project uses fuzzing based on Security Scorecards                                    │ pillow       │ ✔️ INFO     
-  https://github.com/python-pillow/Pillow/releases/tag/8.3.2          │ Release notes for package 'pillow'                                                   │ pillow       │ ✔️ INFO     
-  https://stackoverflow.com/questions/tagged/python-imaging-library   │ See StackOverflow tags specific for Pillow                                           │ pillow       │ ✔️ INFO     
-  https://thoth-station.ninja/j/cve_warning                           │ Package 'pillow' is known to have at least 3 vulnerabilities reported in releases    │ pillow       │ ⚠️ WARNING  
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project does NOT cryptographically sign tags based on Security Scorecards            │ pillow       │ ⚠️ WARNING  
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project does NOT honour CII Best Practices based on Security Scorecards              │ pillow       │ ⚠️ WARNING  
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project does NOT use static source code analysis based on Security Scorecards        │ pillow       │ ⚠️ WARNING  
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project does NOT use tools for automatic dependency updates based on Security        │ pillow       │ ⚠️ WARNING  
-                                                                      │ Scorecards                                                                           │              │            
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project does not have any security policy published based on Security Scorecards     │ pillow       │ ⚠️ WARNING  
-  https://github.com/ossf/scorecard/blob/main/docs/checks.md          │ Project has binary artifacts in the source repository                                │ pillow       │ ⚠️ WARNING  
-  https://thoth-station.ninja/search/package/pygame/2.1.0             │ Browse Thoth Search UI for 'pygame==2.1.0'                                           │ pygame       │ ✔️ INFO     
-  https://libraries.io/pypi/pygame/                                   │ Information about 'pygame' on libraries.io                                           │ pygame       │ ✔️ INFO     
-  https://pypi.org/project/pygame/2.1.0/#files                        │ Installed artifact size for package 'pygame' in version '2.1.0' can have up to       │ pygame       │ ✔️ INFO     
-                                                                      │ 17.43MiB                                                                             │              │            
-  https://thoth-station.ninja/j/no_cve                                │ No known CVE known for 'pygame' in version '2.1.0'                                   │ pygame       │ ✔️ INFO     
-  https://pypi.org/project/pygame/2.1.0/                              │ Package 'pygame' in version '2.1.0' is released on PyPI                              │ pygame       │ ✔️ INFO     
+2022-03-16 13:36:28,231 [2819873] WARNING  thamos: Development dependencies will not be considered during the resolution process - see https://thoth-station.ninja/j/no_dev
+2022-03-16 13:36:28,231 [2819873] INFO     thamos.lib: Using Pipenv files to manage dependencies located in '/home/fpokorny/git/thoth-station/cli-examples'
+2022-03-16 13:36:28,709 [2819873] INFO     thamos.lib: Using 'latest' recommendation type - see https://thoth-station.ninja/recommendation-types/
+2022-03-16 13:36:28,709 [2819873] INFO     thamos.lib: Performing static analysis of sources to gather library usage
+2022-03-16 13:36:29,884 [2819873] INFO     thamos.lib: Successfully submitted advise analysis 'adviser-220316123629-716d2d7af75060c' to 'https://khemenu.thoth-station.ninja/api/v1'
+                                                                          Application stack guidance                                                                          
+                                                                                ╷                                                                                ╷            
+  Link                                                                          │ Message                                                                        │ Type       
+ ═══════════════════════════════════════════════════════════════════════════════╪════════════════════════════════════════════════════════════════════════════════╪═══════════ 
+  https://quay.io/repository/thoth-station/ps-cv-ocr                            │ Consider using a computer vision predictable stack 'ps-cv-ocr' that has        │ ✔️ INFO     
+                                                                                │ prepared environment with 'pillow'                                             │            
+  https://quay.io/repository/thoth-station/ps-cv-pytorch                        │ Consider using a computer vision predictable stack 'ps-cv-pytorch' that has    │ ✔️ INFO     
+                                                                                │ prepared environment with 'pillow'                                             │            
+  https://quay.io/repository/thoth-station/ps-cv-tensorflow                     │ Consider using a computer vision predictable stack 'ps-cv-tensorflow' that has │ ✔️ INFO     
+                                                                                │ prepared environment with 'pillow'                                             │            
+  https://quay.io/repository/thoth-station/ps-ip-ifd                            │ Consider using a image processing predictable stack 'ps-ip-ifd' that has       │ ✔️ INFO     
+                                                                                │ prepared environment with 'pillow'                                             │            
+  https://thoth-station.ninja/search/adviser-220316123629-716d2d7af75060c/summa │ Results can be browsed in Thoth search                                         │ ✔️ INFO     
+  ry                                                                            │                                                                                │            
+  https://thoth-station.ninja/j/cve_timestamp                                   │ CVE database of known vulnerabilities for Python packages was updated at       │ ✔️ INFO     
+                                                                                │ '2022-03-16T00:34:23.507548'                                                   │            
+  https://thoth-station.ninja/j/lax_version                                     │ No version range specifier for 'asyncclick' found, it is recommended to        │ ⚠️ WARNING  
+                                                                                │ specify version ranges in requirements                                         │            
+  https://thoth-station.ninja/j/lax_version                                     │ No version range specifier for 'click' found, it is recommended to specify     │ ⚠️ WARNING  
+                                                                                │ version ranges in requirements                                                 │            
+  https://thoth-station.ninja/j/lax_version                                     │ No version range specifier for 'pillow' found, it is recommended to specify    │ ⚠️ WARNING  
+                                                                                │ version ranges in requirements                                                 │            
+  https://thoth-station.ninja/j/lax_version                                     │ No version range specifier for 'pygame' found, it is recommended to specify    │ ⚠️ WARNING  
+                                                                                │ version ranges in requirements                                                 │            
+  https://thoth-station.ninja/j/thoth_s2i                                       │ It is recommended to use Thoth's s2i to have recommendations specific to       │ ✔️ INFO     
+                                                                                │ runtime environment                                                            │            
+  https://thoth-station.ninja/j/rhel_ubi                                        │ Using observations for RHEL instead of UBI, RHEL is ABI compatible with UBI    │ ⚠️ WARNING  
+  https://thoth-station.ninja/recommendation-types/                             │ Using recommendation type 'latest'                                             │ ✔️ INFO     
+  https://thoth-station.ninja/j/env                                             │ Resolving for runtime environment named 'ubi8'                                 │ ✔️ INFO     
+  https://thoth-station.ninja/j/env                                             │ Resolving for operating system 'rhel' in version '8'                           │ ✔️ INFO     
+  https://thoth-station.ninja/j/env                                             │ Resolving for Python version '3.8'                                             │ ✔️ INFO     
+  https://thoth-station.ninja/j/env                                             │ Using platform 'linux-x86_64'                                                  │ ✔️ INFO     
+  https://thoth-station.ninja/j/env                                             │ No constraints supplied to the resolution process                              │ ✔️ INFO     
+  https://thoth-station.ninja/j/env                                             │ Using supplied static source code analysis                                     │ ✔️ INFO     
+  https://thoth-station.ninja/j/env                                             │ No containerized environment used                                              │ ✔️ INFO     
+  https://thoth-station.ninja/j/env                                             │ Using CPU family 'UNKNWON' model 'UNKNOWN'                                     │ ✔️ INFO     
+  https://thoth-station.ninja/j/env                                             │ No CUDA used                                                                   │ ✔️ INFO     
+  https://thoth-station.ninja/j/env                                             │ No cuDNN used                                                                  │ ✔️ INFO     
+  https://thoth-station.ninja/j/env                                             │ No OpenBLAS used                                                               │ ✔️ INFO     
+  https://thoth-station.ninja/j/env                                             │ No OpenMPI used                                                                │ ✔️ INFO     
+  https://thoth-station.ninja/j/env                                             │ No MKL used                                                                    │ ✔️ INFO     
+  https://thoth-station.ninja/j/eol_env                                         │ Runtime environment used is no longer supported, it is recommended to switch   │ ⚠️ WARNING  
+                                                                                │ to another runtime environment                                                 │            
+  https://thoth-station.ninja/j/prescription                                    │ Using prescriptions 'thoth' release 'v0.17.0'                                  │ ✔️ INFO     
+  https://github.com/thoth-station/prescriptions                                │ Using resolver prescriptions from thoth-station/prescriptions                  │ ✔️ INFO     
+  https://thoth-station.ninja/j/no_cpu                                          │ No CPU model provided, please state CPU model in your .thoth.yaml              │ ⚠️ WARNING  
+                                                                                │ configuration file to have recommendations optimized for your runtime          │            
+                                                                                │ environment                                                                    │            
+  https://thoth-station.ninja/j/no_cpu                                          │ No CPU family provided, please state CPU family in your .thoth.yaml            │ ⚠️ WARNING  
+                                                                                │ configuration file to have recommendations optimized for your runtime          │            
+                                                                                │ environment                                                                    │            
+  https://thoth-station.ninja/j/rules                                           │ Removing package 'click' in versions '<=6.6' from index                        │ ⚠️ WARNING  
+                                                                                │ 'https://pypi.org/simple' based on rule: Package released before December 2016 │            
+  https://thoth-station.ninja/j/rules                                           │ Removing package 'pillow' in versions '<=3.4.2' from index                     │ ⚠️ WARNING  
+                                                                                │ 'https://pypi.org/simple' based on rule: Package released before December 2016 │            
+  https://thoth-station.ninja/j/install_error                                   │ The following versions of 'pillow' from 'https://pypi.org/simple' were removed │ ⚠️ WARNING  
+                                                                                │ due to installation issues in the target environment: 1.7.8, 1.7.7, 1.7.6,     │            
+                                                                                │ 1.7.5, 1.7.4, 1.7.3, 1.7.2, 1.7.1, 1.7.0, 1.6, 1.5, 1.4, 1.3, 1.2, 1.1, 1.0    │            
+  https://thoth-station.ninja/j/install_error                                   │ The following versions of 'pygame' from 'https://pypi.org/simple' were removed │ ⚠️ WARNING  
+                                                                                │ due to installation issues in the target environment: 1.9.6, 1.9.5, 1.9.4,     │            
+                                                                                │ 1.9.3, 1.9.2                                                                   │            
+                                                                                ╵                                                                                ╵            
+                                                                           Recommended stack report                                                                           
+                                                                         ╷                                                                        ╷              ╷            
+  Link                                                                   │ Message                                                                │ Package name │ Type       
+ ════════════════════════════════════════════════════════════════════════╪════════════════════════════════════════════════════════════════════════╪══════════════╪═══════════ 
+  https://github.com/thoth-station/s2i-thoth/                            │ See S2I Thoth base images and their docs for more info                 │ -            │ ✔️ INFO     
+  https://stackoverflow.com/questions/tagged/python-3.8                  │ See StackOverflow tags specific for Python 3.8                         │ -            │ ✔️ INFO     
+  https://thoth-station.ninja/recommendation-types/                      │ The recommended software stack was computed based on the 'latest'      │ -            │ ✔️ INFO     
+                                                                         │ recommendation type                                                    │              │            
+  https://thoth-station.ninja/search/package/asyncclick/8.0.3.1/https%3A │ Browse Thoth Search UI for 'asyncclick==8.0.3.1'                       │ asyncclick   │ ✔️ INFO     
+  %2F%2Fpypi.org%2Fsimple/rhel/8/3.8                                     │                                                                        │              │            
+  https://libraries.io/pypi/asyncclick/                                  │ Information about 'asyncclick' on libraries.io                         │ asyncclick   │ ✔️ INFO     
+  https://thoth-station.ninja/j/no_cve                                   │ No known CVE known for 'asyncclick' in version '8.0.3.1'               │ asyncclick   │ ✔️ INFO     
+  https://pypi.org/project/asyncclick/8.0.3.1/                           │ Package 'asyncclick' in version '8.0.3.1' is released on PyPI          │ asyncclick   │ ✔️ INFO     
+  https://thoth-station.ninja/search/package/click/8.0.3/https%3A%2F%2Fp │ Browse Thoth Search UI for 'click==8.0.3'                              │ click        │ ✔️ INFO     
+  ypi.org%2Fsimple/rhel/8/3.8                                            │                                                                        │              │            
+  https://libraries.io/pypi/click/                                       │ Information about 'click' on libraries.io                              │ click        │ ✔️ INFO     
+  https://pypi.org/project/click/8.0.3/#files                            │ Installed artifact size for package 'click' in version '8.0.3' can     │ click        │ ✔️ INFO     
+                                                                         │ have up to 321.32KiB                                                   │              │            
+  https://thoth-station.ninja/j/no_cve                                   │ No known CVE known for 'click' in version '8.0.3'                      │ click        │ ✔️ INFO     
+  https://pypi.org/project/click/8.0.3/                                  │ Package 'click' in version '8.0.3' is released on PyPI                 │ click        │ ✔️ INFO     
+  https://github.com/pallets/click                                       │ Package 'click' is hosted on GitHub                                    │ click        │ ✔️ INFO     
+  https://github.com/pallets/click                                       │ Project 'click' has very high popularity on GitHub                     │ click        │ ✔️ INFO     
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project does not have binary artifacts in the source repository        │ click        │ ✔️ INFO     
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project does not have open or unfixed vulnerabilities on the OSV       │ click        │ ✔️ INFO     
+                                                                         │ service based on Security Scorecards                                   │              │            
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project has a security policy published based on Security Scorecards   │ click        │ ✔️ INFO     
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project has a set of contributors from multiple companies based on     │ click        │ ✔️ INFO     
+                                                                         │ Security Scorecards                                                    │              │            
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project is actively maintained based on Security Scorecards            │ click        │ ✔️ INFO     
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project requires code review before the code is merged based on        │ click        │ ✔️ INFO     
+                                                                         │ Security Scorecards                                                    │              │            
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project runs CI tests before pull requests are merged based on         │ click        │ ✔️ INFO     
+                                                                         │ Security Scorecards                                                    │              │            
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project uses tools for automatic dependency updates based on Security  │ click        │ ✔️ INFO     
+                                                                         │ Scorecards                                                             │              │            
+  https://github.com/pallets/click/releases/tag/8.0.3                    │ Release notes for package 'click'                                      │ click        │ ✔️ INFO     
+  https://click.palletsprojects.com/                                     │ See Click project documentation                                        │ click        │ ✔️ INFO     
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project does NOT cryptographically sign tags based on Security         │ click        │ ⚠️ WARNING  
+                                                                         │ Scorecards                                                             │              │            
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project does NOT follow the principle of least privileged in GitHub    │ click        │ ⚠️ WARNING  
+                                                                         │ workflows based on Security Scorecards                                 │              │            
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project does NOT have branch protection setup based on Security        │ click        │ ⚠️ WARNING  
+                                                                         │ Scorecards                                                             │              │            
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project does NOT honour CII Best Practices based on Security           │ click        │ ⚠️ WARNING  
+                                                                         │ Scorecards                                                             │              │            
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project does NOT use pinned dependencies based on Security Scorecards  │ click        │ ⚠️ WARNING  
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project does NOT use static source code analysis based on Security     │ click        │ ⚠️ WARNING  
+                                                                         │ Scorecards                                                             │              │            
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project does not use fuzzing based on Security Scorecards              │ click        │ ⚠️ WARNING  
+  https://thoth-station.ninja/search/package/pillow/9.0.0/https%3A%2F%2F │ Browse Thoth Search UI for 'pillow==9.0.0'                             │ pillow       │ ✔️ INFO     
+  pypi.org%2Fsimple/rhel/8/3.8                                           │                                                                        │              │            
+  https://libraries.io/pypi/pillow/                                      │ Information about 'pillow' on libraries.io                             │ pillow       │ ✔️ INFO     
+  https://pypi.org/project/pillow/9.0.0/#files                           │ Installed artifact size for package 'pillow' in version '9.0.0' can    │ pillow       │ ✔️ INFO     
+                                                                         │ have up to 47.22MiB                                                    │              │            
+  https://thoth-station.ninja/j/no_cve                                   │ No known CVE known for 'pillow' in version '9.0.0'                     │ pillow       │ ✔️ INFO     
+  https://pypi.org/project/pillow/9.0.0/                                 │ Package 'pillow' in version '9.0.0' is released on PyPI                │ pillow       │ ✔️ INFO     
+  https://github.com/python-pillow/Pillow                                │ Package 'pillow' is hosted on GitHub                                   │ pillow       │ ✔️ INFO     
+  https://github.com/python-pillow/Pillow                                │ Project 'pillow' has very high popularity on GitHub                    │ pillow       │ ✔️ INFO     
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project does not have open or unfixed vulnerabilities on the OSV       │ pillow       │ ✔️ INFO     
+                                                                         │ service based on Security Scorecards                                   │              │            
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project has a set of contributors from multiple companies based on     │ pillow       │ ✔️ INFO     
+                                                                         │ Security Scorecards                                                    │              │            
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project is actively maintained based on Security Scorecards            │ pillow       │ ✔️ INFO     
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project is published as a package based on Security Scorecards         │ pillow       │ ✔️ INFO     
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project requires code review before the code is merged based on        │ pillow       │ ✔️ INFO     
+                                                                         │ Security Scorecards                                                    │              │            
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project runs CI tests before pull requests are merged based on         │ pillow       │ ✔️ INFO     
+                                                                         │ Security Scorecards                                                    │              │            
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project uses fuzzing based on Security Scorecards                      │ pillow       │ ✔️ INFO     
+  https://github.com/python-pillow/Pillow/releases/tag/9.0.0             │ Release notes for package 'pillow'                                     │ pillow       │ ✔️ INFO     
+  https://stackoverflow.com/questions/tagged/python-imaging-library      │ See StackOverflow tags specific for Pillow                             │ pillow       │ ✔️ INFO     
+  https://thoth-station.ninja/j/cve_warning                              │ Package 'pillow' is known to have at least 3 vulnerabilities reported  │ pillow       │ ⚠️ WARNING  
+                                                                         │ in releases                                                            │              │            
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project does NOT cryptographically sign tags based on Security         │ pillow       │ ⚠️ WARNING  
+                                                                         │ Scorecards                                                             │              │            
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project does NOT honour CII Best Practices based on Security           │ pillow       │ ⚠️ WARNING  
+                                                                         │ Scorecards                                                             │              │            
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project does NOT use static source code analysis based on Security     │ pillow       │ ⚠️ WARNING  
+                                                                         │ Scorecards                                                             │              │            
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project does NOT use tools for automatic dependency updates based on   │ pillow       │ ⚠️ WARNING  
+                                                                         │ Security Scorecards                                                    │              │            
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project does not have any security policy published based on Security  │ pillow       │ ⚠️ WARNING  
+                                                                         │ Scorecards                                                             │              │            
+  https://github.com/ossf/scorecard/blob/main/docs/checks.md             │ Project has binary artifacts in the source repository                  │ pillow       │ ⚠️ WARNING  
+  https://thoth-station.ninja/search/package/pygame/2.1.2/https%3A%2F%2F │ Browse Thoth Search UI for 'pygame==2.1.2'                             │ pygame       │ ✔️ INFO     
+  pypi.org%2Fsimple/rhel/8/3.8                                           │                                                                        │              │            
+  https://libraries.io/pypi/pygame/                                      │ Information about 'pygame' on libraries.io                             │ pygame       │ ✔️ INFO     
+  https://pypi.org/project/pygame/2.1.2/#files                           │ Installed artifact size for package 'pygame' in version '2.1.2' can    │ pygame       │ ✔️ INFO     
+                                                                         │ have up to 20.84MiB                                                    │              │            
+  https://thoth-station.ninja/j/no_cve                                   │ No known CVE known for 'pygame' in version '2.1.2'                     │ pygame       │ ✔️ INFO     
+  https://pypi.org/project/pygame/2.1.2/                                 │ Package 'pygame' in version '2.1.2' is released on PyPI                │ pygame       │ ✔️ INFO     
+  https://github.com/pygame/pygame                                       │ Package 'pygame' is hosted on GitHub                                   │ pygame       │ ✔️ INFO     
+                                                                         ╵                                                                        ╵              ╵            
 
 This might take some time. Once Thoth recommends you the application stack to be used for running the application, you can use Thamos to create a Python environment (based on configuration in ``.thoth.yaml``) and install the recommended requirements into it:
 
