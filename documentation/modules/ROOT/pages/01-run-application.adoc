@@ -26,7 +26,7 @@ TIP: Use the following prepared containerized environment for a reproducible run
 [.lines_space]
 [.console-input]
 [source,bash]
-docker run --rm -it --entrypoint bash quay.io/thoth-station/s2i-thoth-ubi8-py38:v0.32.3  # or use podman
+docker run --rm -it --entrypoint bash quay.io/thoth-station/s2i-thoth-ubi8-py38:latest  # or use podman
 
 [.lines_space]
 [.console-output]
